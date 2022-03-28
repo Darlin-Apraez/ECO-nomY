@@ -1,4 +1,3 @@
-
 import { SafeAreaView, Text, View, StatusBar } from "react-native";
 import React from "react";
 
@@ -7,18 +6,15 @@ import {
   createStackNavigator,
   CardStyleInterpolators,
 } from "@react-navigation/stack";
-import 'react-native-gesture-handler';
+import "react-native-gesture-handler";
 
-import BalanceWallet from "./src/screens/BalanceWallet";
-import ConfirmPassword from "./src/screens/ConfirmPassword";
-import EnterPassword from "./src/screens/EnterPassword";
 import Home from "./src/screens/Home";
-import ReceiveToken from "./src/screens/ReceiveToken";
-import SendToken from "./src/screens/SendToken";
-import Slider from "./src/screens/Slider";
 import Splash from "./src/screens/Splash";
-import VerifyMnemonic from "./src/screens/VerifyMnemonic";
-import WriteMnemonic from "./src/screens/WriteMnemonic";
+import Balance from "./src/screens/Balance";
+import Login from "./src/screens/Login";
+import RedeemECOpoints from "./src/screens/RedeemECOpoints";
+import SustainableActions from "./src/screens/SustainableActions";
+import SignUp from "./src/screens/SignUp";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -40,44 +36,29 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Slider"
-          component={Slider}
+          name="Login"
+          component={Login}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="WriteMnemonic"
-          component={WriteMnemonic}
+          name="SignUp"
+          component={SignUp}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="VerifyMnemonic"
-          component={VerifyMnemonic}
+          name="Balance"
+          component={Balance}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="EnterPassword"
-          component={EnterPassword}
+          name="SustainableActions"
+          component={SustainableActions}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="ConfirmPassword"
-          component={ConfirmPassword}
+          name="RedeemECOpoints"
+          component={RedeemECOpoints}
           options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="BalanceWallet"
-          component={BalanceWallet}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="ReceiveToken"
-          component={ReceiveToken}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="SendToken"
-          component={SendToken}
-          options={{ headerShown: false, gestureEnabled: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
