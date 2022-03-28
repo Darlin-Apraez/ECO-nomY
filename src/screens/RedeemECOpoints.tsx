@@ -9,17 +9,17 @@ import { View, Text, SafeAreaView } from "react-native";
 import BarStatus from "../components/BarStatus";
 import React from "react";
 
-const Splash = () => {
+const RedeemECOpoints = () => {
   return (
     <SafeAreaView style={stylesB.body}>
       <BarStatus />
       <View style={stylesB.completo}>
         <Text style={[stylesM.textColorWhite, stylesM.fontSizeSixteen]}>
-          Splash
+          RedeemECOpoints
         </Text>
       </View>
     </SafeAreaView>
   );
 };
 
-export default Splash;
+export default RedeemECOpoints;

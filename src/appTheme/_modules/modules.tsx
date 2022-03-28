@@ -1,105 +1,89 @@
 import {
-    StyleSheet,
-    Platform,
-    Dimensions,
-    StatusBar,
-    Appearance,
+  StyleSheet,
+  Platform,
+  Dimensions,
+  StatusBar,
+  Appearance,
 } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 export const stylesM = StyleSheet.create({
-    // =====================================================================
-    // VARIABLES UNITARIAS
-    // =====================================================================
-    textColorWhite:{
-        color:"white",
-    },
+  // =====================================================================
+  // VARIABLES UNITARIAS
+  // =====================================================================
+  textColorWhite: {
+    color: "white",
+  },
 
-    textColorBlack:{
-        color:"black",
-    },
-    
-    textColorCian:{
-        color:"#1ee3cf",
-    },
-    
-    textColorPurple:{
-        color:"#5a35b7",
-    },
-    
-    textBold:{
-        fontWeight:"bold",
-    },
+  textColorDarkGreen: {
+    color: "#1F5326",
+  },
 
-    textLight:{
-        fontWeight:"normal"
-    },
+  textColorLimeGreen: {
+    color: "#5AA85D",
+  },
 
-    fontSizeSixteen:{
-        fontSize: RFValue(13)
-    },
+  textColorBrown: {
+    color: "#4F2D17",
+  },
 
-    fontSizeEighteen:{
-        fontSize: RFValue(15),
-    },
-    
-    fontSizeTwenty:{
-        fontSize: RFValue(17)
-    },
-    
-    fontSizeTwentyThree:{
-        fontSize: RFValue(19)
-    },
-    
-    fontSizeTwentyFour:{
-        fontSize: RFValue(20)
-    },
-    
-    fontSizeTwentySix:{
-        fontSize: RFValue(22)
-    },
-    
-    fontSizeSeventyFive:{
-        fontSize: RFValue(63)
-    },
+  textBold: {
+    fontWeight: "bold",
+  },
 
-    backgroundRed:{
-        backgroundColor: "red"
-    },
+  textLight: {
+    fontWeight: "normal",
+  },
 
-    backgroundBlack:{
-        backgroundColor: "black"
-    },
-        
-    backgroundCian:{
-        backgroundColor: "#1ee3cf"
-    },
-        
-    backgroundPurpleDark:{
-        backgroundColor: "#110250"
-    },
-    
-    backgroundWhite:{
-        backgroundColor: "white"
-    },
-    
-    backgroundTurquoise:{
-        backgroundColor: "#70e0f9"
-    },
-    
-    
-       
+  fontSizeTwelve: {
+    fontSize: RFValue(10),
+  },
 
+  fontSizeFourteen: {
+    fontSize: RFValue(12),
+  },
 
-    // =====================================================================
-    // FIN VARIABLES UNITARIAS
-    // =====================================================================
+  fontSizeSixteen: {
+    fontSize: RFValue(13),
+  },
 
-    //Home
+  fontSizeTwenty: {
+    fontSize: RFValue(17),
+  },
 
-    //FinHome
+  fontSizeTwentyTwo: {
+    fontSize: RFValue(18),
+  },
 
+  fontSizeTwentyFour: {
+    fontSize: RFValue(20),
+  },
 
+  fontSizeFortyEight: {
+    fontSize: RFValue(40),
+  },
+
+  backgroundRed: {
+    backgroundColor: "red",
+  },
+
+  backgroundWhite: {
+    backgroundColor: "white",
+  },
+
+  backgroundYellowGreen: {
+    backgroundColor: "#ABCB59",
+  },
+
+  backgroundDarkGreen: {
+    backgroundColor: "#1F5326",
+  },
+
+  // =====================================================================
+  // FIN VARIABLES UNITARIAS
+  // =====================================================================
+
+  //Home
+
+  //FinHome
 });
-
-

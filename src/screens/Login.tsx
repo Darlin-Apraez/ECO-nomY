@@ -5,19 +5,21 @@ import {
   stylesO,
   stylesS,
 } from "./../appTheme/styles/styles";
-import { View, Text, SafeAreaView} from 'react-native'
+import { View, Text, SafeAreaView } from "react-native";
 import BarStatus from "../components/BarStatus";
-import React from 'react'
+import React from "react";
 
-const BalanceWallet = () => {
+const Login = () => {
   return (
     <SafeAreaView style={stylesB.body}>
-      <BarStatus/>
+      <BarStatus />
       <View style={stylesB.completo}>
-        <Text style={[stylesM.textColorWhite, stylesM. fontSizeSixteen]}>Balance</Text>
+        <Text style={[stylesM.textColorWhite, stylesM.fontSizeSixteen]}>
+          Login
+        </Text>
       </View>
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default BalanceWallet
+export default Login;
