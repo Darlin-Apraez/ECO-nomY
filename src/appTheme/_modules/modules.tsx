@@ -59,8 +59,8 @@ export const stylesM = StyleSheet.create({
     fontSize: RFValue(20),
   },
 
-  fontSizeTwentyEight:{
-    fontSize:RFValue(23)
+  fontSizeTwentyEight: {
+    fontSize: RFValue(23),
   },
 
   fontSizeFortyEight: {
@@ -87,18 +87,38 @@ export const stylesM = StyleSheet.create({
   // FIN VARIABLES UNITARIAS
   // =====================================================================
 
-  botonGeneral:{
-    width:336,
-    height:49,
-    borderRadius:6,
+  //Splash
+  logoeconomY: {
+    height: RFValue(183),
+    width: RFValue(250.6),
+    marginTop: RFValue(190),
+    resizeMode: "contain",
+  },
+  //Fin Splash
+  //Home
+  boxButtonIn: {
+    position: "absolute",
+    bottom: RFValue(127),
+  },
+  //FinHome
+
+  //Login
+  botonGeneral: {
+    width: RFValue(305),
+    height: RFValue(45),
+    borderRadius: 6,
   },
 
-  boxButton:{
+  boxButton: {
     position: "absolute",
-    bottom:73,
-  }
+    bottom: RFValue(66.5),
+  },
 
-  //Home
-
-  //FinHome
+  logoeconomYTwo: {
+    height: RFValue(183),
+    width: RFValue(250.6),
+    marginTop: RFValue(130),
+    resizeMode: "contain",
+  },
+  //Fin Login
 });
