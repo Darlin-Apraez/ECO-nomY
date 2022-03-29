@@ -59,6 +59,10 @@ export const stylesM = StyleSheet.create({
     fontSize: RFValue(20),
   },
 
+  fontSizeTwentyEight:{
+    fontSize:RFValue(23)
+  },
+
   fontSizeFortyEight: {
     fontSize: RFValue(40),
   },
@@ -82,6 +86,17 @@ export const stylesM = StyleSheet.create({
   // =====================================================================
   // FIN VARIABLES UNITARIAS
   // =====================================================================
+
+  botonGeneral:{
+    width:336,
+    height:49,
+    borderRadius:6,
+  },
+
+  boxButton:{
+    position: "absolute",
+    bottom:73,
+  }
 
   //Home
 
