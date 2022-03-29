@@ -5,12 +5,14 @@ import {
   stylesO,
   stylesS,
 } from "./../appTheme/styles/styles";
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView,Platform } from "react-native";
 import BarStatus from "../components/BarStatus";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import Icon from "react-native-vector-icons/FontAwesome5";
 
+const altura = Platform.OS === "ios" ? 22 : 25;
 const Login = () => {
   return (
     <LinearGradient
@@ -23,6 +25,7 @@ const Login = () => {
         <BarStatus />
         <View style={stylesB.completo}>
           <View style={stylesM.boxButton}>
+          <Icon name="arrow-left" size={altura} color="#440577" />
             <TouchableOpacity activeOpacity={0.5} style={[stylesM.botonGeneral, stylesM.backgroundYellowGreen, stylesL.JustifyAlign]}>
               <Text style={[stylesM.textColorDarkGreen, stylesM.fontSizeTwentyEight, stylesM.textBold]}>Iniciar sesión</Text>
             </TouchableOpacity>

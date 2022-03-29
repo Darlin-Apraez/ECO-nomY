@@ -8,6 +8,7 @@ import {
 import { View, Text, SafeAreaView, StatusBar, Image } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
+
 import * as Animatable from "react-native-animatable";
 import BarStatus from "../components/BarStatus";
 
