@@ -45,6 +45,7 @@ const Home = ({ navigation }: { navigation: any }) => {
               activeOpacity={0.5}
               style={[
                 stylesM.botonGeneral,
+                stylesM.widthRectangle,
                 stylesM.backgroundYellowGreen,
                 stylesL.JustifyAlign,
               ]}
@@ -64,7 +65,12 @@ const Home = ({ navigation }: { navigation: any }) => {
           <View style={stylesM.boxButton}>
             <TouchableOpacity
               activeOpacity={0.5}
-              style={[stylesM.botonGeneral,stylesO.botonGeneral__WithoutShadow, stylesL.JustifyAlign]}
+              style={[
+                stylesM.botonGeneral,
+                stylesM.widthRectangle,
+                stylesO.botonGeneral__WithoutShadow,
+                stylesL.JustifyAlign,
+              ]}
               onPress={() => navigation.navigate("SignUp")}
             >
               <Text
