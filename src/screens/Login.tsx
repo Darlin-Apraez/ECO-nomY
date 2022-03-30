@@ -51,7 +51,7 @@ const Login = ({ navigation }: { navigation: any }) => {
 
           <View style={stylesM.boxLogoSmall}>
             <Image
-              style={stylesM.logoeconomY__small}
+              style={stylesO.logoeconomY__small}
               source={require("./../../assets/img/ecoSmall.png")}
             />
           </View>
@@ -88,14 +88,14 @@ const Login = ({ navigation }: { navigation: any }) => {
             <View style={[stylesM.boxTitleInput]}>
               <View
                 style={[
-                  stylesM.titleInput,
+                  stylesM.boxTitleInput_titleInput,
                   stylesM.backgroundWhite,
                   stylesL.JustifyAlign,
                 ]}
               >
                 <Text
                   style={[
-                    stylesM.titleInput_txt,
+                    stylesM.boxTitleInput_titleInput_txt,
                     stylesM.fontSizeTwelve,
                     stylesM.textBold,
                     stylesM.textColorDarkGreen,
@@ -127,18 +127,18 @@ const Login = ({ navigation }: { navigation: any }) => {
                 <IconX name="x-circle" size={sizeIconX} color="#fff" />
               </TouchableOpacity>
             </View>
-            <View style={[stylesM.boxTitleInput, stylesM.boxTitleInput__top]}>
+            <View style={[stylesM.boxTitleInput, stylesO.boxTitleInput__top]}>
               <View
                 style={[
-                  stylesM.titleInput,
-                  stylesM.titleInput__widthTop,
+                  stylesM.boxTitleInput_titleInput,
+                  stylesO.boxTitleInput_titleInput__widthTop,
                   stylesM.backgroundWhite,
                   stylesL.JustifyAlign,
                 ]}
               >
                 <Text
                   style={[
-                    stylesM.titleInput_txt,
+                    stylesM.boxTitleInput_titleInput_txt,
                     stylesM.fontSizeTwelve,
                     stylesM.textBold,
                     stylesM.textColorDarkGreen,
@@ -149,7 +149,7 @@ const Login = ({ navigation }: { navigation: any }) => {
               </View>
             </View>
             <View
-              style={[stylesM.boxInput, stylesM.boxInput__top, stylesL.flexRow]}
+              style={[stylesM.boxInput, stylesO.boxInput__top, stylesL.flexRow]}
             >
               <View style={[stylesM.boxInput_txt]}>
                 <TextInput
@@ -186,7 +186,7 @@ const Login = ({ navigation }: { navigation: any }) => {
               >
                 <View
                   style={[
-                    stylesM.validation_Remember__icon,
+                    stylesO.validation_Remember__icon,
                     stylesL.JustifyAlign,
                   ]}
                 >
@@ -206,7 +206,7 @@ const Login = ({ navigation }: { navigation: any }) => {
                 </View>
                 <View
                   style={[
-                    stylesM.validation_Remember__txt,
+                    stylesO.validation_Remember__txt,
                     stylesL.JustifyAlign,
                     stylesL.alignItemsStart,
                   ]}
