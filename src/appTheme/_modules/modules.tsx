@@ -93,6 +93,22 @@ export const stylesM = StyleSheet.create({
     width: RFValue(305)
   },
 
+  radiusFive:{
+    borderRadius: 5,
+  },
+
+  radiusSix:{
+    borderRadius: 6,
+  },
+
+  radiusSeven:{
+    borderRadius: 7,
+  },
+  
+  radiusSixteen:{
+    borderRadius: 16,
+  },
+
   // =====================================================================
   // FIN VARIABLES UNITARIAS
   // =====================================================================
@@ -218,8 +234,11 @@ export const stylesM = StyleSheet.create({
 
   validation_forget:{
     width: '50%',
-  }
-
-
+  },
   //Fin Login
+  //Balance
+  boxWelcome:{
+    marginTop:105
+  },
+  //Fin Balance
 });

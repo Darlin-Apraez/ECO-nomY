@@ -5,12 +5,21 @@ import {
   stylesO,
   stylesS,
 } from "./../appTheme/styles/styles";
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView,Platform } from "react-native";
 import BarStatus from "../components/BarStatus";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
+import IconUser from "react-native-vector-icons/FontAwesome";
 
-const Balance = () => {
+const sizeIcon = Platform.OS === "ios" ? 22 : 25;
+
+const Balance = ({ navigation }: { navigation: any }) => {
+  // Concatenate pkey.
+  var str = '9zkw97JC6ENa4PuQJAJMjnj989R2XWbAxc9onLco3LZ3';
+  var strFirstThree = str.substring(0, 3);
+  var strLastThree = str.substring(str.length - 3, str.length);
+  var concatenado = `${strFirstThree}...${strLastThree}`;
+
   return (
     <LinearGradient
       colors={["#38AA35", "#1F5326"]}
@@ -21,9 +30,17 @@ const Balance = () => {
       <SafeAreaView style={stylesB.body}>
         <BarStatus />
         <View style={stylesB.completo}>
-          <Text style={[stylesM.textColorWhite, stylesM.fontSizeSixteen]}>
-            Balance
-          </Text>
+          <View style={[stylesM.boxWelcome, stylesM.widthRectangle]}>
+            <Text style={[stylesM.textColorWhite, stylesM.fontSizeTwentyFour, stylesM.textBold]}>
+              Bienvenido ECO-amigo.
+            </Text>
+          </View>
+          <View style={[stylesM.widthRectangle, stylesM.backgroundRed]}>
+            <IconUser name="user-circle-o" size={sizeIcon} color="#fff" />
+            <Text>ECO Friend 001</Text>
+            <Text>email001@gmail.com</Text>
+            <Text>Billetera: {concatenado}</Text>
+          </View>
         </View>
       </SafeAreaView>
     </LinearGradient>
