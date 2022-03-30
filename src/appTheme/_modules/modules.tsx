@@ -169,7 +169,6 @@ export const stylesM = StyleSheet.create({
     height:RFValue(13),
     top:RFValue(49),
     zIndex:2,
-
   },
 
   boxTitleInput_titleInput:{

@@ -5,6 +5,11 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 
 export const stylesO = StyleSheet.create({
+    completo__flexGrow:{
+        flexGrow: 1,
+        flex:0
+    },
+
     logoeconomY__small:{
         width: RFValue(75),
         height: RFValue(30),
@@ -15,8 +20,12 @@ export const stylesO = StyleSheet.create({
         top:RFValue(28),
     },
 
-    boxTitleInput_titleInput__widthTop:{
+    boxTitleInput_titleInput__width:{
         width:RFValue(60),
+    },
+
+    boxTitleInput_titleInput__widthConfirm:{
+        width:RFValue(95),
     },
 
     boxInput__top:{
@@ -37,7 +46,11 @@ export const stylesO = StyleSheet.create({
         shadowOffset: { width: 0, height: 0 },
         shadowOpacity: 0,
         shadowRadius: 0,
-    }
-    
+    },
+
+    boxTitle_txt__top:{
+        marginTop:RFValue(30),
+    },
+
     
 });

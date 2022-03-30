@@ -131,7 +131,7 @@ const Login = ({ navigation }: { navigation: any }) => {
               <View
                 style={[
                   stylesM.boxTitleInput_titleInput,
-                  stylesO.boxTitleInput_titleInput__widthTop,
+                  stylesO.boxTitleInput_titleInput__width,
                   stylesM.backgroundWhite,
                   stylesL.JustifyAlign,
                 ]}
