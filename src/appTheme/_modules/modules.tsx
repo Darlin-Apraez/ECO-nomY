@@ -89,6 +89,10 @@ export const stylesM = StyleSheet.create({
     backgroundColor: "#1F5326",
   },
 
+  widthRectangle:{
+    width: RFValue(305)
+  },
+
   // =====================================================================
   // FIN VARIABLES UNITARIAS
   // =====================================================================
@@ -116,7 +120,6 @@ export const stylesM = StyleSheet.create({
 
   //Login
   botonGeneral: {
-    width: RFValue(305),
     height: RFValue(45),
     borderRadius: 6,
     elevation: 3,
@@ -184,7 +187,6 @@ export const stylesM = StyleSheet.create({
   boxInput:{
     borderColor:'white',
     borderWidth:2,
-    width: RFValue(305),
     height:RFValue(47),
     marginTop:RFValue(42),
     borderRadius:4,

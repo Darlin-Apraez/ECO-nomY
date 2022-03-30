@@ -40,10 +40,7 @@ const Login = ({ navigation }: { navigation: any }) => {
         >
           <TouchableOpacity
             activeOpacity={0.5}
-            style={[
-              stylesL.JustifyAlign,
-              stylesM.goBack
-            ]}
+            style={[stylesL.JustifyAlign, stylesM.goBack]}
             onPress={() => navigation.navigate("Home")}
           >
             <Icon name="chevron-left" size={sizeIcon} color="#fff" />
@@ -105,7 +102,13 @@ const Login = ({ navigation }: { navigation: any }) => {
                 </Text>
               </View>
             </View>
-            <View style={[stylesM.boxInput, stylesL.flexRow]}>
+            <View
+              style={[
+                stylesM.boxInput,
+                stylesM.widthRectangle,
+                stylesL.flexRow,
+              ]}
+            >
               <View style={[stylesM.boxInput_txt]}>
                 <TextInput
                   placeholder="Escriba aquí su correo electrónico."
@@ -149,7 +152,12 @@ const Login = ({ navigation }: { navigation: any }) => {
               </View>
             </View>
             <View
-              style={[stylesM.boxInput, stylesO.boxInput__top, stylesL.flexRow]}
+              style={[
+                stylesM.boxInput,
+                stylesM.widthRectangle,
+                stylesO.boxInput__top,
+                stylesL.flexRow,
+              ]}
             >
               <View style={[stylesM.boxInput_txt]}>
                 <TextInput
@@ -238,6 +246,7 @@ const Login = ({ navigation }: { navigation: any }) => {
                 activeOpacity={0.5}
                 style={[
                   stylesM.botonGeneral,
+                  stylesM.widthRectangle,
                   stylesM.backgroundYellowGreen,
                   stylesL.JustifyAlign,
                 ]}
