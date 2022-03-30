@@ -104,7 +104,7 @@ export const stylesM = StyleSheet.create({
   //Home
   boxButtonIn: {
     position: "absolute",
-    bottom: RFValue(127),
+    top: RFValue(535),
   },
   logoeconomYTwo: {
     width: RFValue(292),
@@ -127,11 +127,7 @@ export const stylesM = StyleSheet.create({
     top: RFValue(593),
   },
 
-  logoeconomY__small:{
-    width: RFValue(75),
-    height: RFValue(30),
-    resizeMode: "contain",
-  },  
+   
 
   boxLogoSmall:{
     position: "absolute",
@@ -173,7 +169,7 @@ export const stylesM = StyleSheet.create({
 
   },
 
-  titleInput:{
+  boxTitleInput_titleInput:{
     width:RFValue(41),  
     marginLeft:RFValue(11),
     height:'100%'
@@ -190,17 +186,8 @@ export const stylesM = StyleSheet.create({
   //   left:RFValue(33),
   // },
 
-  titleInput_txt:{
+  boxTitleInput_titleInput_txt:{
 
-  },
-
-  boxTitleInput__top:{
-    top:RFValue(28),
-  },
-
-  titleInput__widthTop:{
-    width:RFValue(60),
-    
   },
 
   boxInput:{
@@ -211,10 +198,6 @@ export const stylesM = StyleSheet.create({
     marginTop:RFValue(42),
     borderRadius:4,
     position: "relative",
-  },
-
-  boxInput__top:{
-    marginTop:RFValue(21)
   },
 
   boxInput_txt:{
@@ -237,16 +220,6 @@ export const stylesM = StyleSheet.create({
 
   validation_Remember:{
     maxWidth: '50%',    
-
-  },
-
-  validation_Remember__icon:{
-    width:'15%',
-
-  },
-
-  validation_Remember__txt:{
-    width:'85%',
 
   },
 
