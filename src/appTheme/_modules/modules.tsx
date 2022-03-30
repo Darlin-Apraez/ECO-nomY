@@ -123,8 +123,8 @@ export const stylesM = StyleSheet.create({
 
   boxButton: {
     position: "absolute",
-    bottom: RFValue(66.5),
-    // top: RFValue(620),
+    // bottom: RFValue(66.5),
+    top: RFValue(593),
   },
 
   logoeconomY__small:{
@@ -141,8 +141,11 @@ export const stylesM = StyleSheet.create({
 
   goBack: {
     position: "absolute",
-    marginTop:RFValue(48),
-    left:RFValue(24),   
+    marginTop:RFValue(37),
+    left:RFValue(5),
+    zIndex:3,
+    width:RFValue(42),
+    height:RFValue(42)
   },
 
   boxTitle:{
