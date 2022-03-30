@@ -30,5 +30,14 @@ export const stylesO = StyleSheet.create({
     validation_Remember__txt:{
         width:'85%',
     },
+
+    botonGeneral__WithoutShadow:{
+        elevation: 0,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 0 },
+        shadowOpacity: 0,
+        shadowRadius: 0,
+    }
+    
     
 });

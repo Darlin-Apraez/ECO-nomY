@@ -119,6 +119,11 @@ export const stylesM = StyleSheet.create({
     width: RFValue(305),
     height: RFValue(45),
     borderRadius: 6,
+    elevation: 3,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 0.2 },
+    shadowOpacity: 0.5,
+    shadowRadius: 6,
   },
 
   boxButton: {
@@ -126,8 +131,6 @@ export const stylesM = StyleSheet.create({
     // bottom: RFValue(66.5),
     top: RFValue(593),
   },
-
-   
 
   boxLogoSmall:{
     position: "absolute",
@@ -174,17 +177,6 @@ export const stylesM = StyleSheet.create({
     marginLeft:RFValue(11),
     height:'100%'
   },
-
-
-
-  // titleInput:{
-  //   width:RFValue(41),
-  //   height:RFValue(13),
-  //   position: "absolute",
-  //   top:RFValue(201),
-  //   zIndex:2,
-  //   left:RFValue(33),
-  // },
 
   boxTitleInput_titleInput_txt:{
 
