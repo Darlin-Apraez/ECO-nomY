@@ -24,4 +24,16 @@ export const stylesL = StyleSheet.create({
     flexColumn:{
         flexDirection: 'column'
     },
+
+    alignItemsStart:{
+        alignItems: 'flex-start'
+    },
+
+    alignItemsEnd:{
+        alignItems: 'flex-end'
+    }
+
+    
+
+    
 });
