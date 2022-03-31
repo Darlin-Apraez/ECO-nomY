@@ -5,9 +5,20 @@ import {
   stylesO,
   stylesS,
 } from "./../appTheme/styles/styles";
-import { View, Text, SafeAreaView,Platform, TouchableOpacity, Clipboard, ToastAndroid, Alert, ScrollView} from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  Platform,
+  TouchableOpacity,
+  Clipboard,
+  ToastAndroid,
+  Alert,
+  ScrollView,
+  Image,
+} from "react-native";
 import BarStatus from "../components/BarStatus";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import IconUser from "react-native-vector-icons/FontAwesome";
 import IconCopy from "react-native-vector-icons/Ionicons";
@@ -17,24 +28,23 @@ const sizeIcon = Platform.OS === "ios" ? 22 : 25;
 const sizeIconButtons = Platform.OS === "ios" ? 22 : 35;
 
 const Balance = ({ navigation }: { navigation: any }) => {
-
   //copy icons
   const [copy, setCopy] = useState(
     <IconCopy name="copy-outline" size={15} color="#fff" />
-  )
+  );
 
   const [copyWallet, setCopyWallet] = useState(
     <IconCopy name="copy-outline" size={15} color="#fff" />
-  )
+  );
 
   const CopyEmail = () => {
-    Clipboard.setString('email001@gmail.com');
+    Clipboard.setString("email001@gmail.com");
     if (Platform.OS === "android") {
       ToastAndroid.show("Correo copiado", ToastAndroid.SHORT);
     } else {
       Alert.alert("Correo copiado");
     }
-    
+
     setTimeout(() => {
       setCopy(<IconCopy name="copy-sharp" size={15} color="#fff" />);
       setTimeout(() => {
@@ -44,7 +54,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
   };
 
   const CopyWallet = () => {
-    Clipboard.setString('9zkw97JC6ENa4PuQJAJMjnj989R2XWbAxc9onLco3LZ3');
+    Clipboard.setString("9zkw97JC6ENa4PuQJAJMjnj989R2XWbAxc9onLco3LZ3");
     if (Platform.OS === "android") {
       ToastAndroid.show("Dirección copiada", ToastAndroid.SHORT);
     } else {
@@ -60,12 +70,10 @@ const Balance = ({ navigation }: { navigation: any }) => {
   };
 
   // Concatenate pkey.
-  var str = '9zkw97JC6ENa4PuQJAJMjnj989R2XWbAxc9onLco3LZ3';
+  var str = "9zkw97JC6ENa4PuQJAJMjnj989R2XWbAxc9onLco3LZ3";
   var strFirstThree = str.substring(0, 3);
   var strLastThree = str.substring(str.length - 3, str.length);
   var concatenado = `${strFirstThree}...${strLastThree}`;
-
-  
 
   return (
     <LinearGradient
@@ -78,7 +86,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
         <BarStatus />
         <View style={stylesB.completo}>
           <ScrollView
-            contentContainerStyle={{bottom:25 }}
+            contentContainerStyle={{ bottom: 25 }}
             horizontal={false}
             showsVerticalScrollIndicator={false}
           >
@@ -86,7 +94,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
               <Text
                 style={[
                   stylesM.textColorWhite,
-                  stylesM.fontSizeTwentyEight,
+                  stylesM.fontSizeTwentyFour,
                   stylesM.textBold,
                 ]}
               >
@@ -102,7 +110,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
                 stylesM.widthRectangle,
                 stylesM.radiusFive,
                 stylesL.JustifyAlign,
-                stylesL.flexColumn
+                stylesL.flexColumn,
               ]}
             >
               <View style={stylesM.boxUser}>
@@ -130,10 +138,16 @@ const Balance = ({ navigation }: { navigation: any }) => {
                   email001@gmail.com
                 </Text>
               </View>
-              <View style={[stylesM.widthRectangle, stylesM.boxCopy,stylesL.alignItemsEnd]}>
+              <View
+                style={[
+                  stylesM.widthRectangle,
+                  stylesM.boxCopy,
+                  stylesL.alignItemsEnd,
+                ]}
+              >
                 <TouchableOpacity
                   activeOpacity={0.5}
-                  style={[stylesM.copyButton, stylesL.JustifyAlign,]}
+                  style={[stylesM.copyButton, stylesL.JustifyAlign]}
                   onPress={() => CopyEmail()}
                 >
                   {copy}
@@ -150,13 +164,17 @@ const Balance = ({ navigation }: { navigation: any }) => {
                   Billetera: {concatenado}
                 </Text>
               </View>
-              <View style={[stylesM.widthRectangle, stylesM.boxCopy, stylesO.boxCopy__top, stylesL.alignItemsEnd]}>
+              <View
+                style={[
+                  stylesM.widthRectangle,
+                  stylesM.boxCopy,
+                  stylesO.boxCopy__top,
+                  stylesL.alignItemsEnd,
+                ]}
+              >
                 <TouchableOpacity
                   activeOpacity={0.5}
-                  style={[
-                    stylesM.copyButton,
-                    stylesL.JustifyAlign,
-                  ]}
+                  style={[stylesM.copyButton, stylesL.JustifyAlign]}
                   onPress={() => CopyWallet()}
                 >
                   {copyWallet}
@@ -201,17 +219,16 @@ const Balance = ({ navigation }: { navigation: any }) => {
               // onPress={() => navigation.navigate("Balance")}
             >
               <View style={[stylesM.balanceButtons_icon, stylesL.JustifyAlign]}>
-                <IconButtons
-                  name="arrow-up-right"
-                  size={sizeIconButtons}
-                  color="#fff"
+                <Image
+                  source={require("./../../assets/img/send.png")}
+                  style={stylesM.balanceButtons_icon_image}
                 />
               </View>
               <View style={[stylesM.balanceButtons_txt, stylesL.Justify]}>
                 <Text
                   style={[
                     stylesM.textColorWhite,
-                    stylesM.fontSizeTwentyFour,
+                    stylesM.fontSizeTwentyTwo,
                     stylesM.textBold,
                   ]}
                 >
@@ -232,17 +249,16 @@ const Balance = ({ navigation }: { navigation: any }) => {
               // onPress={() => navigation.navigate("Balance")}
             >
               <View style={[stylesM.balanceButtons_icon, stylesL.JustifyAlign]}>
-                <IconButtons
-                  name="arrow-down-left"
-                  size={sizeIconButtons}
-                  color="#fff"
+                <Image
+                  source={require("./../../assets/img/receive.png")}
+                  style={stylesM.balanceButtons_icon_image}
                 />
               </View>
               <View style={[stylesM.balanceButtons_txt, stylesL.Justify]}>
                 <Text
                   style={[
                     stylesM.textColorWhite,
-                    stylesM.fontSizeTwentyFour,
+                    stylesM.fontSizeTwentyTwo,
                     stylesM.textBold,
                   ]}
                 >

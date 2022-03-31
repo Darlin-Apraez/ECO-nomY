@@ -49,8 +49,8 @@ export const stylesM = StyleSheet.create({
     fontSize: RFValue(13),
   },
 
-  fontSizeEighteen:{
-    fontSize:RFValue(15)
+  fontSizeEighteen: {
+    fontSize: RFValue(15),
   },
 
   fontSizeTwenty: {
@@ -89,23 +89,23 @@ export const stylesM = StyleSheet.create({
     backgroundColor: "#1F5326",
   },
 
-  widthRectangle:{
-    width: RFValue(305)
+  widthRectangle: {
+    width: RFValue(305),
   },
 
-  radiusFive:{
+  radiusFive: {
     borderRadius: 5,
   },
 
-  radiusSix:{
+  radiusSix: {
     borderRadius: 6,
   },
 
-  radiusSeven:{
+  radiusSeven: {
     borderRadius: 7,
   },
-  
-  radiusSixteen:{
+
+  radiusSixteen: {
     borderRadius: 16,
   },
 
@@ -151,139 +151,254 @@ export const stylesM = StyleSheet.create({
     top: RFValue(593),
   },
 
-  boxLogoSmall:{
+  boxLogoSmall: {
     position: "absolute",
-    top:RFValue(41), 
+    top: RFValue(41),
     right: RFValue(16.5),
   },
 
   goBack: {
     position: "absolute",
-    marginTop:RFValue(37),
-    left:RFValue(5),
-    zIndex:3,
-    width:RFValue(42),
-    height:RFValue(42)
+    marginTop: RFValue(37),
+    left: RFValue(5),
+    zIndex: 3,
+    width: RFValue(42),
+    height: RFValue(42),
   },
 
-  boxTitle:{
-    width:RFValue(305),
-    height:RFValue(77),
-    marginTop:RFValue(88),
+  boxTitle: {
+    width: RFValue(305),
+    height: RFValue(77),
+    marginTop: RFValue(88),
   },
 
-  boxTitle_title:{
-    height:RFValue(22),
-    marginLeft:RFValue(21),
+  boxTitle_title: {
+    height: RFValue(22),
+    marginLeft: RFValue(21),
   },
 
-  boxTitle_txt:{
-    width:RFValue(263),
-    marginTop:RFValue(2.5),
-    marginLeft:RFValue(21),
+  boxTitle_txt: {
+    width: RFValue(263),
+    marginTop: RFValue(2.5),
+    marginLeft: RFValue(21),
   },
 
-  boxTitleInput:{
-    width:RFValue(305),
-    height:RFValue(13),
-    top:RFValue(49),
-    zIndex:2,
+  boxTitleInput: {
+    width: RFValue(305),
+    height: RFValue(13),
+    top: RFValue(49),
+    zIndex: 2,
   },
 
-  boxTitleInput_titleInput:{
-    width:RFValue(41),  
-    marginLeft:RFValue(11),
-    height:'100%'
+  boxTitleInput_titleInput: {
+    width: RFValue(41),
+    marginLeft: RFValue(11),
+    height: "100%",
   },
 
-  boxTitleInput_titleInput_txt:{
+  boxTitleInput_titleInput_txt: {},
 
-  },
-
-  boxInput:{
-    borderColor:'white',
-    borderWidth:2,
-    height:RFValue(47),
-    marginTop:RFValue(42),
-    borderRadius:4,
+  boxInput: {
+    borderColor: "white",
+    borderWidth: 2,
+    height: RFValue(47),
+    marginTop: RFValue(42),
+    borderRadius: 4,
     position: "relative",
   },
 
-  boxInput_txt:{
-    width:'85%'
+  boxInput_txt: {
+    width: "85%",
   },
 
-  inputTxt:{
-    padding:RFValue(13),
+  inputTxt: {
+    padding: RFValue(13),
   },
 
-  boxInput_icon:{
-    width:'15%',
+  boxInput_icon: {
+    width: "15%",
   },
 
-  validation:{
+  validation: {
     maxWidth: RFValue(305),
-    height:RFValue(17),
-    marginTop:RFValue(12.5),
+    height: RFValue(17),
+    marginTop: RFValue(12.5),
   },
 
-  validation_Remember:{
-    maxWidth: '50%',    
-
+  validation_Remember: {
+    maxWidth: "50%",
   },
 
-  validation_forget:{
-    width: '50%',
+  validation_forget: {
+    width: "50%",
   },
   //Fin Login
   //Balance
-  boxWelcome:{
-    marginTop:RFValue(91.5),
+  boxWelcome: {
+    marginTop: RFValue(91.5),
   },
-  boxInfo:{
-    marginTop:RFValue(23.5),
-    height:RFValue(111),
-  },
-
-  boxUser:{
-    top:RFValue(4)
+  boxInfo: {
+    marginTop: RFValue(23.5),
+    height: RFValue(111),
   },
 
-  boxInfo_txt:{
-    marginTop:RFValue(8)
+  boxUser: {
+    top: RFValue(4),
   },
 
-  boxCopy:{
-   position: "absolute",
-   paddingRight:RFValue(60),
-   top:RFValue(60)
+  boxInfo_txt: {
+    marginTop: RFValue(8),
   },
 
-  copyButton:{
+  boxCopy: {
+    position: "absolute",
+    paddingRight: RFValue(56),
+    top: RFValue(60),
+  },
+
+  copyButton: {
     width: RFValue(21.8),
     height: RFValue(21.8),
   },
 
-  boxEcoPoint:{
-    height:RFValue(150.3),
-    marginTop:RFValue(19.4),
+  boxEcoPoint: {
+    height: RFValue(150.3),
+    marginTop: RFValue(19.4),
   },
 
-  boxEcoAffiliates:{
-    height:RFValue(110.1),
-    marginTop:RFValue(11)
+  boxEcoAffiliates: {
+    height: RFValue(110.1),
+    marginTop: RFValue(11),
   },
 
-  balanceButtons:{
-    marginTop:RFValue(15)
+  balanceButtons: {
+    marginTop: RFValue(15),
   },
 
-  balanceButtons_icon:{
-    width:'17%'
+  balanceButtons_icon: {
+    width: "17%",
+  },
+  balanceButtons_icon_image: {
+    height: RFValue(25),
+    width: RFValue(25),
   },
 
-  balanceButtons_txt:{
-    width:'83%'
+  balanceButtons_txt: {
+    width: "83%",
   },
   //Fin Balance
+
+  //Menú lateral
+  chevronLeft: {
+    top: RFValue(41),
+    left: RFValue(16),
+    width: RFValue(35),
+  },
+
+  userMenuLeft: {
+    top: RFValue(80),
+    left: RFValue(30),
+    alignItems: "center",
+    width: RFValue(215),
+  },
+
+  userMenuLeft_title: {
+    width: "15%",
+  },
+
+  userMenuLeft_width: {
+    width: "60%",
+  },
+
+  userMenuLeft_pencil: {
+    width: "15%",
+    left: RFValue(11),
+  },
+
+  userMenuLeft_pencil_image: {
+    height: RFValue(45.9),
+    width: RFValue(45.9),
+    top: RFValue(2.6),
+    resizeMode: "contain",
+  },
+
+  userMenuLeft_ecoLeft: {
+    left: RFValue(11),
+  },
+
+  notiMenuLeft: {
+    top: RFValue(92),
+    left: RFValue(30),
+    alignItems: "center",
+    width: RFValue(215),
+  },
+
+  notiMenuLeft_width: {
+    width: "17%",
+  },
+
+  notiMenuLeft_widthTwo: {
+    width: "60%",
+  },
+
+  notiMenuLeft_icono: {
+    height: RFValue(42),
+    width: RFValue(42),
+    left: RFValue(-5),
+  },
+  notiMenuLeft_text: {
+    left: RFValue(8),
+  },
+
+  transactionMenuLeft: {
+    top: RFValue(109),
+    left: RFValue(30),
+    width: RFValue(215),
+  },
+
+  transactionMenuLeft_width: {
+    width: "17%",
+  },
+
+  transactionMenuLeft_icono: {
+    height: RFValue(42),
+    width: RFValue(42),
+    left: RFValue(-5),
+  },
+
+  transactionMenuLeft_widthTwo: {
+    width: "60%",
+    justifyContent: "center",
+  },
+
+  transactionMenuLeft_text: {
+    left: RFValue(8),
+  },
+
+  menulogoeconomY: {
+    left: RFValue(30),
+    bottom: RFValue(90),
+    position: "absolute",
+  },
+
+  menulogoeconomY_logo: {
+    height: RFValue(22),
+    width: RFValue(63),
+  },
+
+  closeSesionMenu: {
+    position: "absolute",
+    bottom: RFValue(45),
+    left: RFValue(30),
+  },
+
+  closeSesionMenu_width: {
+    width: "17%",
+  },
+
+  closeSesionMenu_widthTwo: {
+    width: "60%",
+  },
+
+  //Fin Menú lateral
 });
