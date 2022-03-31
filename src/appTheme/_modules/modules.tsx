@@ -240,5 +240,43 @@ export const stylesM = StyleSheet.create({
   boxWelcome:{
     marginTop:105
   },
+  boxInfo:{
+    marginTop:27,
+    height:127
+  },
+
+  boxInfo_txt:{
+    marginTop:5
+  },
+
+  copyButton:{
+    position: 'absolute',
+    width: 25,
+    height: 25,
+    right:88,
+    top:67
+  },
+
+  boxEcoPoint:{
+    height:172,
+    marginTop:23
+  },
+
+  boxEcoAffiliates:{
+    height:126,
+    marginTop:13
+  },
+
+  balanceButtons:{
+    marginTop:22
+  },
+
+  balanceButtons_icon:{
+    width:'17%'
+  },
+
+  balanceButtons_txt:{
+    width:'83%'
+  },
   //Fin Balance
 });
