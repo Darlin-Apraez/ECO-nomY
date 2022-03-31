@@ -1,4 +1,11 @@
-import { SafeAreaView, Text, View, StatusBar, Platform, Image } from "react-native";
+import {
+  SafeAreaView,
+  Text,
+  View,
+  StatusBar,
+  Platform,
+  Image,
+} from "react-native";
 import React from "react";
 
 import { NavigationContainer } from "@react-navigation/native";
@@ -9,7 +16,7 @@ import {
 import "react-native-gesture-handler";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { RFValue } from "react-native-responsive-fontsize";
-
+import { createDrawerNavigator } from "@react-navigation/drawer";
 
 import Home from "./src/screens/Home";
 import Splash from "./src/screens/Splash";
@@ -19,13 +26,13 @@ import RedeemECOpoints from "./src/screens/RedeemECOpoints";
 import SustainableActions from "./src/screens/SustainableActions";
 import SignUp from "./src/screens/SignUp";
 import Index from "./src/screens/Index";
-
+import CustomDrawer from "./src/components/CustomDrawer";
 
 const Tab = createBottomTabNavigator();
-const barios = Platform.OS === "ios" ? 61 : 50;
+const barIos = Platform.OS === "ios" ? 61 : 50;
+const Drawer = createDrawerNavigator();
 
 function NavigationMenu() {
- 
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -33,7 +40,7 @@ function NavigationMenu() {
         tabBarShowLabel: false,
 
         tabBarStyle: {
-          height: RFValue(barios),
+          height: RFValue(barIos),
           backgroundColor: "#2e882b",
           borderTopColor: "#2e882b",
           elevation: 0,
@@ -49,11 +56,11 @@ function NavigationMenu() {
             imagenes = focused
               ? require("./assets/img/sustainableActionsActive.png")
               : require("./assets/img/sustainableActions.png");
-          }else if (route.name === "RedeemECOpoints") {
+          } else if (route.name === "RedeemECOpoints") {
             imagenes = focused
               ? require("./assets/img/redeemECOpointsActive.png")
               : require("./assets/img/redeemECOpoints.png");
-          }else if (route.name === "Index") {
+          } else if (route.name === "Index") {
             imagenes = focused
               ? require("./assets/img/indexActive.png")
               : require("./assets/img/index.png");
@@ -79,10 +86,30 @@ function NavigationMenu() {
   );
 }
 
-
-
-
-
+function DrawerApp() {
+  return (
+    <Drawer.Navigator
+      drawerContent={CustomDrawer}
+      screenOptions={{
+        drawerStyle: {
+          backgroundColor: "rgba(30, 82, 37, 0.95)",
+          width: 300,
+        },
+      }}
+    >
+      <Drawer.Screen
+        name="NavigationMenu"
+        component={NavigationMenu}
+        options={{
+          swipeEnabled: false,
+          headerTransparent: true,
+          headerTitle: "",
+          headerTintColor: "white",
+        }}
+      />
+    </Drawer.Navigator>
+  );
+}
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -111,6 +138,11 @@ export default function App() {
         <Stack.Screen
           name="SignUp"
           component={SignUp}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="DrawerApp"
+          component={DrawerApp}
           options={{ headerShown: false }}
         />
         <Stack.Screen

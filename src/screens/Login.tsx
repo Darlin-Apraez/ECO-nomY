@@ -5,7 +5,16 @@ import {
   stylesO,
   stylesS,
 } from "./../appTheme/styles/styles";
-import { View, Text, SafeAreaView,Platform,Image, TextInput, TouchableOpacity, ScrollView} from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  Platform,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 import BarStatus from "../components/BarStatus";
 import React, { useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
@@ -14,15 +23,13 @@ import IconX from "react-native-vector-icons/Foundation";
 import IconCheck from "react-native-vector-icons/MaterialCommunityIcons";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
-
-
 const sizeIcon = Platform.OS === "ios" ? 22 : 25;
 const sizeIconX = Platform.OS === "ios" ? 28 : 30;
 
 const Login = ({ navigation }: { navigation: any }) => {
   const [textEmail, setTextEmail] = useState("");
   const [textPass, setTextPass] = useState("");
-  const [check,setCheck] = useState(false);
+  const [check, setCheck] = useState(false);
 
   return (
     <LinearGradient
@@ -250,7 +257,7 @@ const Login = ({ navigation }: { navigation: any }) => {
                   stylesM.backgroundYellowGreen,
                   stylesL.JustifyAlign,
                 ]}
-                onPress={() => navigation.navigate("NavigationMenu")}
+                onPress={() => navigation.navigate("DrawerApp")}
               >
                 <Text
                   style={[
