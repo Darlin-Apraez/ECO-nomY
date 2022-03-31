@@ -238,37 +238,44 @@ export const stylesM = StyleSheet.create({
   //Fin Login
   //Balance
   boxWelcome:{
-    marginTop:105
+    marginTop:RFValue(91.5),
   },
   boxInfo:{
-    marginTop:27,
-    height:127
+    marginTop:RFValue(23.5),
+    height:RFValue(111),
+  },
+
+  boxUser:{
+    top:RFValue(4)
   },
 
   boxInfo_txt:{
-    marginTop:5
+    marginTop:RFValue(8)
+  },
+
+  boxCopy:{
+   position: "absolute",
+   paddingRight:RFValue(60),
+   top:RFValue(60)
   },
 
   copyButton:{
-    position: 'absolute',
-    width: 25,
-    height: 25,
-    right:88,
-    top:67
+    width: RFValue(21.8),
+    height: RFValue(21.8),
   },
 
   boxEcoPoint:{
-    height:172,
-    marginTop:23
+    height:RFValue(150.3),
+    marginTop:RFValue(19.4),
   },
 
   boxEcoAffiliates:{
-    height:126,
-    marginTop:13
+    height:RFValue(110.1),
+    marginTop:RFValue(11)
   },
 
   balanceButtons:{
-    marginTop:22
+    marginTop:RFValue(15)
   },
 
   balanceButtons_icon:{

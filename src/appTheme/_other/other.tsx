@@ -52,9 +52,7 @@ export const stylesO = StyleSheet.create({
         marginTop:RFValue(30),
     },
 
-    copyButton__top:{
-        top:91
+    boxCopy__top:{
+        top:RFValue(85),
     }
-
-    
 });

@@ -78,151 +78,178 @@ const Balance = ({ navigation }: { navigation: any }) => {
         <BarStatus />
         <View style={stylesB.completo}>
           <ScrollView
-            contentContainerStyle={{ flex: 2 }}
+            contentContainerStyle={{bottom:25 }}
             horizontal={false}
             showsVerticalScrollIndicator={false}
           >
-          <View style={[stylesM.boxWelcome, stylesM.widthRectangle]}>
-            <Text
+            <View style={[stylesM.boxWelcome, stylesM.widthRectangle]}>
+              <Text
+                style={[
+                  stylesM.textColorWhite,
+                  stylesM.fontSizeTwentyEight,
+                  stylesM.textBold,
+                ]}
+              >
+                Bienvenido ECO-amigo.
+              </Text>
+            </View>
+            <LinearGradient
+              colors={["#225C28", "#38AA35"]}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 0, y: 1.2 }}
               style={[
-                stylesM.textColorWhite,
-                stylesM.fontSizeTwentyEight,
-                stylesM.textBold,
+                stylesM.boxInfo,
+                stylesM.widthRectangle,
+                stylesM.radiusFive,
+                stylesL.JustifyAlign,
+                stylesL.flexColumn
               ]}
             >
-              Bienvenido ECO-amigo.
-            </Text>
-          </View>
-          <LinearGradient
-            colors={["#225C28", "#38AA35"]}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 0, y: 1.2 }}
-            style={[
-              stylesM.boxInfo,
-              stylesM.widthRectangle,
-              stylesM.radiusFive,
-              stylesL.JustifyAlign,
-            ]}
-          >
-            <IconUser name="user-circle-o" size={sizeIcon} color="#fff" />
-            <Text
+              <View style={stylesM.boxUser}>
+                <IconUser name="user-circle-o" size={sizeIcon} color="#fff" />
+              </View>
+              <View>
+                <Text
+                  style={[
+                    stylesM.boxInfo_txt,
+                    stylesM.textColorWhite,
+                    stylesM.fontSizeEighteen,
+                  ]}
+                >
+                  ECO Friend 001
+                </Text>
+              </View>
+              <View>
+                <Text
+                  style={[
+                    stylesM.boxInfo_txt,
+                    stylesM.textColorWhite,
+                    stylesM.fontSizeEighteen,
+                  ]}
+                >
+                  email001@gmail.com
+                </Text>
+              </View>
+              <View style={[stylesM.widthRectangle, stylesM.boxCopy,stylesL.alignItemsEnd]}>
+                <TouchableOpacity
+                  activeOpacity={0.5}
+                  style={[stylesM.copyButton, stylesL.JustifyAlign,]}
+                  onPress={() => CopyEmail()}
+                >
+                  {copy}
+                </TouchableOpacity>
+              </View>
+              <View>
+                <Text
+                  style={[
+                    stylesM.boxInfo_txt,
+                    stylesM.textColorWhite,
+                    stylesM.fontSizeEighteen,
+                  ]}
+                >
+                  Billetera: {concatenado}
+                </Text>
+              </View>
+              <View style={[stylesM.widthRectangle, stylesM.boxCopy, stylesO.boxCopy__top, stylesL.alignItemsEnd]}>
+                <TouchableOpacity
+                  activeOpacity={0.5}
+                  style={[
+                    stylesM.copyButton,
+                    stylesL.JustifyAlign,
+                  ]}
+                  onPress={() => CopyWallet()}
+                >
+                  {copyWallet}
+                </TouchableOpacity>
+              </View>
+            </LinearGradient>
+
+            <View
               style={[
-                stylesM.boxInfo_txt,
-                stylesM.textColorWhite,
-                stylesM.fontSizeEighteen,
-              ]}
-            >
-              ECO Friend 001
-            </Text>
-            <Text
-              style={[
-                stylesM.boxInfo_txt,
-                stylesM.textColorWhite,
-                stylesM.fontSizeEighteen,
-              ]}
-            >
-              email001@gmail.com
-            </Text>
-            <TouchableOpacity
-              activeOpacity={0.5}
-              style={[stylesM.copyButton, stylesL.JustifyAlign]}
-              onPress={() => CopyEmail()}
-            >
-              {copy}
-            </TouchableOpacity>
-            <Text
-              style={[
-                stylesM.boxInfo_txt,
-                stylesM.textColorWhite,
-                stylesM.fontSizeEighteen,
-              ]}
-            >
-              Billetera: {concatenado}
-            </Text>
-            <TouchableOpacity
-              activeOpacity={0.5}
-              style={[
-                stylesM.copyButton,
-                stylesO.copyButton__top,
+                stylesM.boxEcoPoint,
+                stylesM.radiusSeven,
+                stylesM.widthRectangle,
+                stylesM.backgroundDarkGreen,
                 stylesL.JustifyAlign,
               ]}
-              onPress={() => CopyWallet()}
             >
-              {copyWallet}
+              <Text
+                style={[stylesM.textColorWhite, stylesM.fontSizeTwentyFour]}
+              >
+                1200
+              </Text>
+            </View>
+
+            <View
+              style={[
+                stylesM.boxEcoAffiliates,
+                stylesM.radiusSeven,
+                stylesM.widthRectangle,
+                stylesM.backgroundDarkGreen,
+              ]}
+            ></View>
+
+            <TouchableOpacity
+              activeOpacity={0.5}
+              style={[
+                stylesM.botonGeneral,
+                stylesM.widthRectangle,
+                stylesM.backgroundDarkGreen,
+                stylesL.flexRow,
+                stylesM.balanceButtons,
+              ]}
+              // onPress={() => navigation.navigate("Balance")}
+            >
+              <View style={[stylesM.balanceButtons_icon, stylesL.JustifyAlign]}>
+                <IconButtons
+                  name="arrow-up-right"
+                  size={sizeIconButtons}
+                  color="#fff"
+                />
+              </View>
+              <View style={[stylesM.balanceButtons_txt, stylesL.Justify]}>
+                <Text
+                  style={[
+                    stylesM.textColorWhite,
+                    stylesM.fontSizeTwentyFour,
+                    stylesM.textBold,
+                  ]}
+                >
+                  Enviar
+                </Text>
+              </View>
             </TouchableOpacity>
-          </LinearGradient>
 
-          <View
-            style={[
-              stylesM.boxEcoPoint,
-              stylesM.radiusSeven,
-              stylesM.widthRectangle,
-              stylesM.backgroundDarkGreen,
-            ]}
-          ></View>
-
-          <View
-            style={[
-              stylesM.boxEcoAffiliates,
-              stylesM.radiusSeven,
-              stylesM.widthRectangle,
-              stylesM.backgroundDarkGreen,
-            ]}
-          ></View>
-
-          <TouchableOpacity
-            activeOpacity={0.5}
-            style={[
-              stylesM.botonGeneral,
-              stylesM.widthRectangle,
-              stylesM.backgroundDarkGreen,
-              stylesL.flexRow,
-              stylesM.balanceButtons
-            ]}
-            // onPress={() => navigation.navigate("Balance")}
-          >
-            <View style={[stylesM.balanceButtons_icon, stylesL.JustifyAlign]}>
-              <IconButtons name="arrow-up-right" size={sizeIconButtons} color="#fff" />
-            </View>
-            <View style={[stylesM.balanceButtons_txt, stylesL.Justify]}>
-              <Text
-                style={[
-                  stylesM.textColorWhite,
-                  stylesM.fontSizeTwentyFour,
-                  stylesM.textBold,
-                ]}
-              >
-                Enviar
-              </Text>
-            </View>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            activeOpacity={0.5}
-            style={[
-              stylesM.botonGeneral,
-              stylesM.widthRectangle,
-              stylesM.backgroundDarkGreen,
-              stylesL.flexRow,
-              stylesM.balanceButtons
-            ]}
-            // onPress={() => navigation.navigate("Balance")}
-          >
-            <View style={[stylesM.balanceButtons_icon, stylesL.JustifyAlign]}>
-              <IconButtons name="arrow-down-left" size={sizeIconButtons} color="#fff" />
-            </View>
-            <View style={[stylesM.balanceButtons_txt, stylesL.Justify]}>
-              <Text
-                style={[
-                  stylesM.textColorWhite,
-                  stylesM.fontSizeTwentyFour,
-                  stylesM.textBold,
-                ]}
-              >
-                Recibir
-              </Text>
-            </View>
-          </TouchableOpacity>
+            <TouchableOpacity
+              activeOpacity={0.5}
+              style={[
+                stylesM.botonGeneral,
+                stylesM.widthRectangle,
+                stylesM.backgroundDarkGreen,
+                stylesL.flexRow,
+                stylesM.balanceButtons,
+              ]}
+              // onPress={() => navigation.navigate("Balance")}
+            >
+              <View style={[stylesM.balanceButtons_icon, stylesL.JustifyAlign]}>
+                <IconButtons
+                  name="arrow-down-left"
+                  size={sizeIconButtons}
+                  color="#fff"
+                />
+              </View>
+              <View style={[stylesM.balanceButtons_txt, stylesL.Justify]}>
+                <Text
+                  style={[
+                    stylesM.textColorWhite,
+                    stylesM.fontSizeTwentyFour,
+                    stylesM.textBold,
+                  ]}
+                >
+                  Recibir
+                </Text>
+              </View>
+            </TouchableOpacity>
           </ScrollView>
         </View>
       </SafeAreaView>
