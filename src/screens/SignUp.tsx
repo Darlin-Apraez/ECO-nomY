@@ -246,7 +246,7 @@ const SignUp = ({ navigation }: { navigation: any }) => {
                   stylesM.backgroundYellowGreen,
                   stylesL.JustifyAlign,
                 ]}
-                onPress={() => navigation.navigate("Balance")}
+                onPress={() => navigation.navigate("NavigationMenu")}
               >
                 <Text
                   style={[
