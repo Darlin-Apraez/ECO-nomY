@@ -114,17 +114,17 @@ export const stylesM = StyleSheet.create({
   },
 
   boxTitlePrincipal: {
-    marginTop: RFValue(82),
+    marginTop: RFValue(62),
   },
 
   boxSubTitlePrincipal: {
-    marginTop: RFValue(43),
-    width: RFValue(208),
+    marginTop: RFValue(38),
+    marginBottom: RFValue(10)
   },
 
   boxWidth: {
     height: RFValue(135),
-    top: RFValue(15.5),
+    marginTop: RFValue(15.5),
   },
 
   // =====================================================================
@@ -251,7 +251,7 @@ export const stylesM = StyleSheet.create({
 
   //Balance
   boxWelcome: {
-    marginTop: RFValue(91.5),
+    marginTop: RFValue(70),
   },
   boxInfo: {
     marginTop: RFValue(23.5),
@@ -420,8 +420,8 @@ export const stylesM = StyleSheet.create({
 
   //Sustainable Actions
   boxImagePrincipal: {
-    top: RFValue(80),
-    left: RFValue(219),
+    top: RFValue(55),
+    right: RFValue(38),
     position: "absolute",
   },
 
@@ -429,6 +429,10 @@ export const stylesM = StyleSheet.create({
     height: RFValue(81),
     width: RFValue(81),
     resizeMode: "contain",
+  },
+
+  boxSubTitle: {
+    marginTop: 35,
   },
 
   //End Sustainable Actions
@@ -441,4 +445,22 @@ export const stylesM = StyleSheet.create({
   },
 
   //End redem
+
+  //Index
+  boxTitlePersonal:{
+    marginTop:13
+  },
+
+  boxBow:{
+    marginTop:6
+  },
+
+  boxBow_image:{
+    width: 162,
+    height: 93,
+    resizeMode: "contain",
+  },
+  //End Index
+
+
 });

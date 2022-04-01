@@ -21,40 +21,44 @@ const RedeemECOpoints = () => {
       <SafeAreaView style={stylesB.body}>
         <BarStatus />
         <View style={stylesB.completo}>
+          <View style={[stylesM.boxTitlePrincipal, stylesM.widthRectangle]}>
+            <Text
+              style={[
+                stylesM.textColorWhite,
+                stylesM.fontSizeTwentyTwo,
+                stylesM.textBold,
+              ]}
+            >
+              Tus contribuciones.
+            </Text>
+          </View>
+
+          <View
+            style={[stylesM.boxImagePrincipal, stylesO.boxImagePrincipal__top]}
+          >
+            <Image
+              style={stylesM.boxImagePrincipal_imageBag}
+              source={require("./../../assets/img/redem.png")}
+            />
+          </View>
+
+          <View style={stylesM.boxSubTitlePrincipal}>
+            <Text
+              style={[
+                stylesM.textColorWhite,
+                stylesM.widthRectangle,
+                stylesM.fontSizeSixteen,
+              ]}
+            >
+              Tus Acciones sostenibles.
+            </Text>
+          </View>
+
           <ScrollView
-            contentContainerStyle={{ flex: 2, bottom: 25 }}
+            contentContainerStyle={{ marginTop:10, bottom: 25 }}
             horizontal={false}
             showsVerticalScrollIndicator={false}
           >
-            <View style={[stylesM.boxTitlePrincipal, stylesM.widthRectangle]}>
-              <Text
-                style={[
-                  stylesM.textColorWhite,
-                  stylesM.fontSizeTwentyTwo,
-                  stylesM.textBold,
-                ]}
-              >
-                Redimir ECOpuntos.
-              </Text>
-            </View>
-            <View
-              style={[
-                stylesM.boxImagePrincipal,
-                stylesO.boxImagePrincipal__top,
-              ]}
-            >
-              <Image
-                style={stylesM.boxImagePrincipal_imageBag}
-                source={require("./../../assets/img/redem.png")}
-              />
-            </View>
-
-            <View style={stylesM.boxSubTitlePrincipal}>
-              <Text style={[stylesM.textColorWhite, stylesM.fontSizeSixteen]}>
-                Canjea tus ECOPuntos.
-              </Text>
-            </View>
-
             <View
               style={[
                 stylesM.widthRectangle,

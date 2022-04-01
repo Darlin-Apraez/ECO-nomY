@@ -85,22 +85,27 @@ const Balance = ({ navigation }: { navigation: any }) => {
       <SafeAreaView style={stylesB.body}>
         <BarStatus />
         <View style={stylesB.completo}>
+          <View
+            style={[
+              stylesM.boxWelcome,
+              stylesM.widthRectangle,
+            ]}
+          >
+            <Text
+              style={[
+                stylesM.textColorWhite,
+                stylesM.fontSizeTwentyFour,
+                stylesM.textBold,
+              ]}
+            >
+              Bienvenido ECO-amigo.
+            </Text>
+          </View>
           <ScrollView
-            contentContainerStyle={{ bottom: 25 }}
+            contentContainerStyle={{ marginTop:10, bottom: 25 }}
             horizontal={false}
             showsVerticalScrollIndicator={false}
           >
-            <View style={[stylesM.boxWelcome, stylesM.widthRectangle]}>
-              <Text
-                style={[
-                  stylesM.textColorWhite,
-                  stylesM.fontSizeTwentyFour,
-                  stylesM.textBold,
-                ]}
-              >
-                Bienvenido ECO-amigo.
-              </Text>
-            </View>
             <LinearGradient
               colors={["#225C28", "#38AA35"]}
               start={{ x: 0, y: 0 }}
