@@ -57,4 +57,8 @@ export const stylesO = StyleSheet.create({
     top: RFValue(35),
     right: RFValue(22),
   },
+
+  boxWidth__height:{
+    height:RFValue(235)
+  }
 });
