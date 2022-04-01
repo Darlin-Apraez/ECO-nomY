@@ -5,7 +5,7 @@ import {
   stylesO,
   stylesS,
 } from "./../appTheme/styles/styles";
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import BarStatus from "../components/BarStatus";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
@@ -21,9 +21,23 @@ const SustainableActions = () => {
       <SafeAreaView style={stylesB.body}>
         <BarStatus />
         <View style={stylesB.completo}>
-          <Text style={[stylesM.textColorWhite, stylesM.fontSizeSixteen]}>
-            SustainableActions
-          </Text>
+          <ScrollView
+            contentContainerStyle={{ bottom: 25 }}
+            horizontal={false}
+            showsVerticalScrollIndicator={false}
+          >
+            <View style={[stylesM.boxTitlePrincipal, stylesM.widthRectangle]}>
+              <Text
+                style={[
+                  stylesM.textColorWhite,
+                  stylesM.fontSizeTwentyTwo,
+                  stylesM.textBold,
+                ]}
+              >
+                Tus contribuciones.
+              </Text>
+            </View>
+          </ScrollView>
         </View>
       </SafeAreaView>
     </LinearGradient>
