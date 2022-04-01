@@ -64,7 +64,7 @@ const Login = ({ navigation }: { navigation: any }) => {
             horizontal={false}
             showsVerticalScrollIndicator={false}
           >
-            <View style={stylesM.boxTitle}>
+            <View style={[stylesM.boxTitle, stylesM.widthRectangle]}>
               <View style={[stylesM.boxTitle_title]}>
                 <Text
                   style={[
@@ -89,7 +89,7 @@ const Login = ({ navigation }: { navigation: any }) => {
                 </Text>
               </View>
             </View>
-            <View style={[stylesM.boxTitleInput]}>
+            <View style={[stylesM.boxTitleInput, stylesM.widthRectangle]}>
               <View
                 style={[
                   stylesM.boxTitleInput_titleInput,
@@ -112,6 +112,7 @@ const Login = ({ navigation }: { navigation: any }) => {
             <View
               style={[
                 stylesM.boxInput,
+                stylesM.radiusFour,
                 stylesM.widthRectangle,
                 stylesL.flexRow,
               ]}
@@ -137,7 +138,13 @@ const Login = ({ navigation }: { navigation: any }) => {
                 <IconX name="x-circle" size={sizeIconX} color="#fff" />
               </TouchableOpacity>
             </View>
-            <View style={[stylesM.boxTitleInput, stylesO.boxTitleInput__top]}>
+            <View
+              style={[
+                stylesM.boxTitleInput,
+                stylesM.widthRectangle,
+                stylesO.boxTitleInput__top,
+              ]}
+            >
               <View
                 style={[
                   stylesM.boxTitleInput_titleInput,
@@ -161,6 +168,7 @@ const Login = ({ navigation }: { navigation: any }) => {
             <View
               style={[
                 stylesM.boxInput,
+                stylesM.radiusFour,
                 stylesM.widthRectangle,
                 stylesO.boxInput__top,
                 stylesL.flexRow,

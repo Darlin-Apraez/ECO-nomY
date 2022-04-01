@@ -66,7 +66,7 @@ const SignUp = ({ navigation }: { navigation: any }) => {
             horizontal={false}
             showsVerticalScrollIndicator={false}
           >
-            <View style={stylesM.boxTitle}>
+            <View style={[stylesM.boxTitle, stylesM.widthRectangle]}>
               <View style={[stylesM.boxTitle_title]}>
                 <Text
                   style={[
@@ -92,7 +92,7 @@ const SignUp = ({ navigation }: { navigation: any }) => {
               </View>
             </View>
 
-            <View style={[stylesM.boxTitleInput]}>
+            <View style={[stylesM.boxTitleInput, stylesM.widthRectangle]}>
               <View
                 style={[
                   stylesM.boxTitleInput_titleInput,
@@ -115,6 +115,7 @@ const SignUp = ({ navigation }: { navigation: any }) => {
             <View
               style={[
                 stylesM.boxInput,
+                stylesM.radiusFour,
                 stylesM.widthRectangle,
                 stylesL.flexRow,
               ]}
@@ -141,7 +142,13 @@ const SignUp = ({ navigation }: { navigation: any }) => {
               </TouchableOpacity>
             </View>
 
-            <View style={[stylesM.boxTitleInput, stylesO.boxTitleInput__top]}>
+            <View
+              style={[
+                stylesM.boxTitleInput,
+                stylesM.widthRectangle,
+                stylesO.boxTitleInput__top,
+              ]}
+            >
               <View
                 style={[
                   stylesM.boxTitleInput_titleInput,
@@ -165,6 +172,7 @@ const SignUp = ({ navigation }: { navigation: any }) => {
             <View
               style={[
                 stylesM.boxInput,
+                stylesM.radiusFour,
                 stylesM.widthRectangle,
                 stylesO.boxInput__top,
                 stylesL.flexRow,
@@ -193,7 +201,13 @@ const SignUp = ({ navigation }: { navigation: any }) => {
               </TouchableOpacity>
             </View>
 
-            <View style={[stylesM.boxTitleInput, stylesO.boxTitleInput__top]}>
+            <View
+              style={[
+                stylesM.boxTitleInput,
+                stylesM.widthRectangle,
+                stylesO.boxTitleInput__top,
+              ]}
+            >
               <View
                 style={[
                   stylesM.boxTitleInput_titleInput,
@@ -217,6 +231,7 @@ const SignUp = ({ navigation }: { navigation: any }) => {
             <View
               style={[
                 stylesM.boxInput,
+                stylesM.radiusFour,
                 stylesM.widthRectangle,
                 stylesO.boxInput__top,
                 stylesL.flexRow,

@@ -11,7 +11,7 @@ const fontSizeTwelveIos = Platform.OS === "ios" ? 8.5 : 10;
 
 export const stylesM = StyleSheet.create({
   // =====================================================================
-  // VARIABLES UNITARIAS
+  // UNITY VARIABLES
   // =====================================================================
   textColorWhite: {
     color: "white",
@@ -93,6 +93,10 @@ export const stylesM = StyleSheet.create({
     width: RFValue(305),
   },
 
+  radiusFour: {
+    borderRadius: 4,
+  },
+
   radiusFive: {
     borderRadius: 5,
   },
@@ -113,8 +117,18 @@ export const stylesM = StyleSheet.create({
     marginTop: RFValue(82),
   },
 
+  boxSubTitlePrincipal: {
+    marginTop: RFValue(43),
+    width: RFValue(208),
+  },
+
+  boxWidth: {
+    height: RFValue(135),
+    top: RFValue(15.5),
+  },
+
   // =====================================================================
-  // FIN VARIABLES UNITARIAS
+  // END UNITY VARIABLES.
   // =====================================================================
 
   //Splash
@@ -124,7 +138,8 @@ export const stylesM = StyleSheet.create({
     marginTop: RFValue(190),
     resizeMode: "contain",
   },
-  //Fin Splash
+  //End Splash
+
   //Home
   boxButtonIn: {
     position: "absolute",
@@ -136,7 +151,7 @@ export const stylesM = StyleSheet.create({
     marginTop: RFValue(120),
     resizeMode: "contain",
   },
-  //FinHome
+  //End Home
 
   //Login
   botonGeneral: {
@@ -151,7 +166,6 @@ export const stylesM = StyleSheet.create({
 
   boxButton: {
     position: "absolute",
-    // bottom: RFValue(66.5),
     top: RFValue(593),
   },
 
@@ -171,7 +185,6 @@ export const stylesM = StyleSheet.create({
   },
 
   boxTitle: {
-    width: RFValue(305),
     height: RFValue(77),
     marginTop: RFValue(88),
   },
@@ -188,7 +201,6 @@ export const stylesM = StyleSheet.create({
   },
 
   boxTitleInput: {
-    width: RFValue(305),
     height: RFValue(13),
     top: RFValue(49),
     zIndex: 2,
@@ -207,7 +219,6 @@ export const stylesM = StyleSheet.create({
     borderWidth: 2,
     height: RFValue(47),
     marginTop: RFValue(42),
-    borderRadius: 4,
     position: "relative",
   },
 
@@ -236,7 +247,8 @@ export const stylesM = StyleSheet.create({
   validation_forget: {
     width: "50%",
   },
-  //Fin Login
+  //End Login
+
   //Balance
   boxWelcome: {
     marginTop: RFValue(91.5),
@@ -290,9 +302,9 @@ export const stylesM = StyleSheet.create({
   balanceButtons_txt: {
     width: "83%",
   },
-  //Fin Balance
+  //End Balance
 
-  //Menú lateral
+  //Lateral Menu
   chevronLeft: {
     top: RFValue(41),
     left: RFValue(16),
@@ -404,5 +416,29 @@ export const stylesM = StyleSheet.create({
     width: "60%",
   },
 
-  //Fin Menú lateral
+  //End Lateral Menu
+
+  //Sustainable Actions
+  boxImagePrincipal: {
+    top: RFValue(80),
+    left: RFValue(219),
+    position: "absolute",
+  },
+
+  boxImagePrincipal_image: {
+    height: RFValue(81),
+    width: RFValue(81),
+    resizeMode: "contain",
+  },
+
+  //End Sustainable Actions
+
+  //Redem
+  boxImagePrincipal_imageBag: {
+    height: RFValue(105),
+    width: RFValue(105),
+    resizeMode: "contain",
+  },
+
+  //End redem
 });
