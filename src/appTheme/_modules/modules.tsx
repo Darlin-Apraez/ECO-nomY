@@ -109,6 +109,10 @@ export const stylesM = StyleSheet.create({
     borderRadius: 16,
   },
 
+  boxTitlePrincipal: {
+    marginTop: RFValue(82),
+  },
+
   // =====================================================================
   // FIN VARIABLES UNITARIAS
   // =====================================================================
