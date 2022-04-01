@@ -89,6 +89,10 @@ export const stylesM = StyleSheet.create({
     backgroundColor: "#1F5326",
   },
 
+  backgroundGhostWhite:{
+    backgroundColor: "#E5E6F2",
+  },
+
   widthRectangle: {
     width: RFValue(305),
   },
@@ -448,18 +452,23 @@ export const stylesM = StyleSheet.create({
 
   //Index
   boxTitlePersonal:{
-    marginTop:13
+    marginTop:RFValue(10),
   },
 
   boxBow:{
-    marginTop:6
+    marginTop:RFValue(5),
   },
 
   boxBow_image:{
-    width: 162,
-    height: 93,
+    width: RFValue(136),
+    height: RFValue(78),
     resizeMode: "contain",
   },
+
+  boxCity:{
+    width:RFValue(270),
+    height:RFValue(185),
+  }
   //End Index
 
 

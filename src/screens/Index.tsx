@@ -110,7 +110,28 @@ const Index = () => {
               </View>
             </View>
 
-            
+            <View
+              style={[
+                stylesM.widthRectangle,
+                stylesM.backgroundDarkGreen,
+                stylesM.boxWidth,
+                stylesO.boxWidth__height,
+                stylesM.radiusSixteen,
+                stylesL.JustifyAlign,
+              ]}
+            >
+              <View style={[stylesL.JustifyAlign, stylesM.boxCity, stylesM.backgroundGhostWhite, stylesM.radiusSixteen]}>
+                <Text
+                  style={[
+                    stylesM.textColorDarkGreen,
+                    stylesM.fontSizeSixteen,
+                    stylesM.textBold,
+                  ]}
+                >
+                  Indice de tu ciudad.
+                </Text>
+              </View>
+            </View>            
           </ScrollView>
         </View>
       </SafeAreaView>
