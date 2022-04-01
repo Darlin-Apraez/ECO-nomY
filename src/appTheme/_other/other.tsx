@@ -54,6 +54,7 @@ export const stylesO = StyleSheet.create({
   },
 
   boxImagePrincipal__top: {
-    top: RFValue(65),
+    top: RFValue(35),
+    right: RFValue(22),
   },
 });
