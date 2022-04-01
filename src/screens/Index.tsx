@@ -22,7 +22,7 @@ const Index = () => {
         <BarStatus />
         <View style={stylesB.completo}>
           <ScrollView
-            contentContainerStyle={{ bottom: 25 }}
+            contentContainerStyle={{ flex: 2, bottom: 25 }}
             horizontal={false}
             showsVerticalScrollIndicator={false}
           >
@@ -37,6 +37,23 @@ const Index = () => {
                 Indicadores.
               </Text>
             </View>
+
+            <View style={[stylesM.boxImagePrincipal]}></View>
+
+            <View style={stylesM.boxSubTitlePrincipal}>
+              <Text style={[stylesM.textColorWhite, stylesM.fontSizeSixteen]}>
+                Sus indicadores.
+              </Text>
+            </View>
+
+            <View
+              style={[
+                stylesM.widthRectangle,
+                stylesM.backgroundDarkGreen,
+                stylesM.boxWidth,
+                stylesM.radiusSixteen,
+              ]}
+            ></View>
           </ScrollView>
         </View>
       </SafeAreaView>
