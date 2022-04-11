@@ -293,7 +293,7 @@ export const stylesM = StyleSheet.create({
   boxEcoAffiliates: {
     height: RFValue(110.1),
     marginTop: RFValue(11),
-    padding:15
+    padding:RFValue(12)
   },
 
   boxEcoAffiliates_history:{
@@ -339,20 +339,20 @@ export const stylesM = StyleSheet.create({
   },
 
   boxEcoPoint_currency_img:{
-    width:111,
-    height:111,
-    resizeMode:'contain'
+    width:RFValue(93),
+    height:RFValue(93),
+    resizeMode:'contain',
   },
 
   boxEcoPoint_currency_contributions:{
-    width:34,
-    height:34,
-    resizeMode:'contain'
+    width:RFValue(28.5),
+    height:RFValue(28.5),
+    resizeMode:'contain',
   },
 
   boxEcoAffiliates_picture:{
     width:'18%',
-    height:60,
+    height:RFValue(52),
   },
   //End Balance
 
