@@ -85,12 +85,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
       <SafeAreaView style={stylesB.body}>
         <BarStatus />
         <View style={stylesB.completo}>
-          <View
-            style={[
-              stylesM.boxWelcome,
-              stylesM.widthRectangle,
-            ]}
-          >
+          <View style={[stylesM.boxWelcome, stylesM.widthRectangle]}>
             <Text
               style={[
                 stylesM.textColorWhite,
@@ -102,7 +97,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
             </Text>
           </View>
           <ScrollView
-            contentContainerStyle={{ marginTop:10, bottom: 25 }}
+            contentContainerStyle={{ marginTop: 10, bottom: 25 }}
             horizontal={false}
             showsVerticalScrollIndicator={false}
           >
@@ -194,13 +189,45 @@ const Balance = ({ navigation }: { navigation: any }) => {
                 stylesM.widthRectangle,
                 stylesM.backgroundDarkGreen,
                 stylesL.JustifyAlign,
+                stylesL.flexColumn,
               ]}
             >
-              <Text
-                style={[stylesM.textColorWhite, stylesM.fontSizeTwentyFour]}
-              >
-                1200
-              </Text>
+              <View style={[stylesL.flexRow, stylesM.boxAmount]}>
+                <View style={[stylesM.boxEcoPoint_amount, stylesL.alignItemsEnd, stylesL.Justify]}>
+                  <Text
+                    style={[stylesM.textColorWhite, stylesM.fontSizeSixtyFour]}
+                  >
+                    100
+                  </Text>
+                </View>
+                <View style={[stylesM.boxEcoPoint_currency, stylesL.Justify]}>
+                  <Image
+                    style={stylesM.boxEcoPoint_currency_img}
+                    source={require("./../../assets/img/currency.png")}
+                  />
+                </View>
+              </View>
+
+              <View style={[stylesL.flexRow, stylesM.boxContributions]}>
+                <View style={[stylesM.boxEcoPoint_amount, stylesL.alignItemsEnd, stylesL.Justify]}>
+                  <Text
+                    style={[stylesM.textColorWhite, stylesM.fontSizeSixteen, stylesM.textBold]}
+                  >
+                    Contribuciones:
+                  </Text>
+                </View>
+                <View style={[stylesM.boxEcoPoint_currency, stylesL.flexRow]}>
+                  <View style={[{width:'20%'}, stylesL.Justify, stylesL.alignItemsEnd]}>
+                    <Text style={[stylesM.textColorWhite, stylesM.fontSizeTwentyFour, stylesM.textBold]}>51</Text>
+                  </View>
+                  <View style={[{width:'20%'}, stylesL.Justify]}>
+                    <Image
+                      style={stylesM.boxEcoPoint_currency_contributions}
+                      source={require("./../../assets/img/contributions.png")}
+                    />
+                  </View>
+                </View>
+              </View>
             </View>
 
             <View
@@ -209,8 +236,16 @@ const Balance = ({ navigation }: { navigation: any }) => {
                 stylesM.radiusSeven,
                 stylesM.widthRectangle,
                 stylesM.backgroundDarkGreen,
+                stylesL.Justify
               ]}
-            ></View>
+            >
+              <View style={[stylesL.flexRow, stylesM.boxEcoAffiliates_history]}>
+                <TouchableOpacity activeOpacity={0.5} style={[stylesM.boxEcoAffiliates_picture, stylesM.backgroundYellowGreen, stylesM.radiusFive]}></TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.5} style={[stylesM.boxEcoAffiliates_picture, stylesM.backgroundYellowGreen, stylesM.radiusFive]}></TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.5} style={[stylesM.boxEcoAffiliates_picture, stylesM.backgroundYellowGreen, stylesM.radiusFive]}></TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.5} style={[stylesM.boxEcoAffiliates_picture, stylesM.backgroundYellowGreen, stylesM.radiusFive]}></TouchableOpacity>
+              </View>
+            </View>
 
             <TouchableOpacity
               activeOpacity={0.5}
