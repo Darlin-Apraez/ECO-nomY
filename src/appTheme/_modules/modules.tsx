@@ -73,6 +73,10 @@ export const stylesM = StyleSheet.create({
     fontSize: RFValue(40),
   },
 
+  fontSizeSixtyFour:{
+    fontSize: RFValue(53.5),
+  },
+
   backgroundRed: {
     backgroundColor: "red",
   },
@@ -289,6 +293,11 @@ export const stylesM = StyleSheet.create({
   boxEcoAffiliates: {
     height: RFValue(110.1),
     marginTop: RFValue(11),
+    padding:15
+  },
+
+  boxEcoAffiliates_history:{
+    justifyContent:'space-between'
   },
 
   balanceButtons: {
@@ -298,6 +307,7 @@ export const stylesM = StyleSheet.create({
   balanceButtons_icon: {
     width: "17%",
   },
+
   balanceButtons_icon_image: {
     height: RFValue(25),
     width: RFValue(25),
@@ -305,6 +315,44 @@ export const stylesM = StyleSheet.create({
 
   balanceButtons_txt: {
     width: "83%",
+  },
+
+  boxAmount:{
+    height:'70%'
+  },
+
+  boxContributions:{
+    height:'30%'
+  },
+
+  boxEcoPoint_currency_total:{
+    width:'20%'
+  },
+
+  boxEcoPoint_amount:{
+    width:'50%',
+    paddingRight:15
+  },
+
+  boxEcoPoint_currency:{
+    width:'50%',
+  },
+
+  boxEcoPoint_currency_img:{
+    width:111,
+    height:111,
+    resizeMode:'contain'
+  },
+
+  boxEcoPoint_currency_contributions:{
+    width:34,
+    height:34,
+    resizeMode:'contain'
+  },
+
+  boxEcoAffiliates_picture:{
+    width:'18%',
+    height:60,
   },
   //End Balance
 
@@ -468,8 +516,8 @@ export const stylesM = StyleSheet.create({
   boxCity:{
     width:RFValue(270),
     height:RFValue(185),
-  }
+  },
   //End Index
 
-
+  
 });
