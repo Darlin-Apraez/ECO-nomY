@@ -1,16 +1,19 @@
 import {
-  stylesB,
-  stylesL,
-  stylesM,
-  stylesO,
-  stylesS,
-} from "./../appTheme/styles/styles";
-import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity } from "react-native";
-import BarStatus from "../components/BarStatus";
-import React from "react";
-import { LinearGradient } from "expo-linear-gradient";
+    stylesB,
+    stylesL,
+    stylesM,
+    stylesO,
+    stylesS,
+  } from "./../appTheme/styles/styles";
+  import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity, Platform } from "react-native";
+  import BarStatus from "../components/BarStatus";
+  import React from "react";
+  import { LinearGradient } from "expo-linear-gradient";
+  import Icon from "react-native-vector-icons/FontAwesome";
 
-const RedeemECOpoints = ({ navigation }: { navigation: any }) => {
+const sizeIcon = Platform.OS === "ios" ? 22 : 25;
+
+const EcoAffilliateRedeem = ({ navigation }: { navigation: any }) => {
   return (
     <LinearGradient
       colors={["#38AA35", "#1F5326"]}
@@ -21,6 +24,13 @@ const RedeemECOpoints = ({ navigation }: { navigation: any }) => {
       <SafeAreaView style={stylesB.body}>
         <BarStatus />
         <View style={stylesB.completo}>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            style={[stylesL.JustifyAlign, stylesM.goBack, stylesO.goBack__top]}
+            onPress={() => navigation.goBack()}
+          >
+            <Icon name="chevron-left" size={sizeIcon} color="#fff" />
+          </TouchableOpacity>
           <View style={[stylesM.boxTitlePrincipal, stylesM.widthRectangle]}>
             <Text
               style={[
@@ -29,17 +39,8 @@ const RedeemECOpoints = ({ navigation }: { navigation: any }) => {
                 stylesM.textBold,
               ]}
             >
-              Redimir ECOpuntos.
+              ECO Afiliado 1.
             </Text>
-          </View>
-
-          <View
-            style={[stylesM.boxImagePrincipal, stylesO.boxImagePrincipal__top]}
-          >
-            <Image
-              style={stylesM.boxImagePrincipal_imageBag}
-              source={require("./../../assets/img/redem.png")}
-            />
           </View>
 
           <View style={stylesM.boxSubTitlePrincipal}>
@@ -50,7 +51,7 @@ const RedeemECOpoints = ({ navigation }: { navigation: any }) => {
                 stylesM.fontSizeSixteen,
               ]}
             >
-              Canjea tus ECOPuntos.
+              Información para redimir tus ECOpuntos
             </Text>
           </View>
 
@@ -59,21 +60,19 @@ const RedeemECOpoints = ({ navigation }: { navigation: any }) => {
             horizontal={false}
             showsVerticalScrollIndicator={false}
           >
-            <TouchableOpacity
-              activeOpacity={0.5}
+            <View
               style={[
                 stylesM.widthRectangle,
                 stylesM.backgroundDarkGreen,
                 stylesM.boxWidth,
                 stylesM.radiusSixteen,
               ]}
-              onPress={() => navigation.navigate("EcoAffilliateRedeem")}
-            ></TouchableOpacity>
+            ></View>
           </ScrollView>
         </View>
       </SafeAreaView>
     </LinearGradient>
   );
-};
+}
 
-export default RedeemECOpoints;
+export default EcoAffilliateRedeem

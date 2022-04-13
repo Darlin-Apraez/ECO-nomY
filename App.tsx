@@ -27,6 +27,7 @@ import SustainableActions from "./src/screens/SustainableActions";
 import SignUp from "./src/screens/SignUp";
 import Index from "./src/screens/Index";
 import CustomDrawer from "./src/components/CustomDrawer";
+import EcoAffilliateRedeem from "./src/screens/EcoAffilliateRedeem";
 
 const Tab = createBottomTabNavigator();
 const barIos = Platform.OS === "ios" ? 61 : 50;
@@ -158,6 +159,11 @@ export default function App() {
         <Stack.Screen
           name="RedeemECOpoints"
           component={RedeemECOpoints}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="EcoAffilliateRedeem"
+          component={EcoAffilliateRedeem}
           options={{ headerShown: false }}
         />
         <Stack.Screen
