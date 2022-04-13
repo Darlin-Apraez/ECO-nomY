@@ -74,4 +74,16 @@ export const stylesO = StyleSheet.create({
   goBack__top:{
     marginTop:RFValue(0),
   },
+
+  boxWidth__heightHistory:{
+    height:301
+  },
+
+  boxWidth__heightCall:{
+    height:252
+  },
+
+  boxWidth__heightExchange:{
+    height:552
+  }
 });
