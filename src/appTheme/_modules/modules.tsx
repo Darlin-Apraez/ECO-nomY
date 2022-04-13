@@ -496,9 +496,11 @@ export const stylesM = StyleSheet.create({
     resizeMode: "contain",
   },
 
-  boxSubTitle: {
-    marginTop: 35,
+  boxAddition: {
+    marginTop: RFValue(15.5),
   },
+
+
 
   //End Sustainable Actions
 

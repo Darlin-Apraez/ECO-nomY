@@ -60,13 +60,14 @@ const SustainableActions = () => {
             <View
               style={[
                 stylesM.widthRectangle,
-                stylesM.backgroundDarkGreen,
+                stylesM.backgroundYellowGreen,
                 stylesM.boxWidth,
-                stylesM.radiusSixteen,
+                stylesO.boxWidth__heightHistory,
+                stylesM.radiusFive,
               ]}
             ></View>
 
-            <View style={stylesM.boxSubTitle}>
+            <View style={stylesM.boxAddition}>
               <Text
                 style={[
                   stylesM.fontSizeEighteen,
@@ -77,6 +78,16 @@ const SustainableActions = () => {
                 Convocatorias - suma ECOpuntos.
               </Text>
             </View>
+
+            <View
+              style={[
+                stylesM.widthRectangle,
+                stylesM.backgroundDarkGreen,
+                stylesM.boxWidth,
+                stylesO.boxWidth__heightCall,
+                stylesM.radiusSeven,
+              ]}
+            ></View>
           </ScrollView>
         </View>
       </SafeAreaView>

@@ -63,9 +63,10 @@ const RedeemECOpoints = ({ navigation }: { navigation: any }) => {
               activeOpacity={0.5}
               style={[
                 stylesM.widthRectangle,
-                stylesM.backgroundDarkGreen,
+                stylesM.backgroundYellowGreen,
                 stylesM.boxWidth,
-                stylesM.radiusSixteen,
+                stylesO.boxWidth__heightExchange,
+                stylesM.radiusFive,
               ]}
               onPress={() => navigation.navigate("EcoAffilliateRedeem")}
             ></TouchableOpacity>
