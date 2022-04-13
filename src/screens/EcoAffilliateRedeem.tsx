@@ -10,8 +10,10 @@ import {
   import React from "react";
   import { LinearGradient } from "expo-linear-gradient";
   import Icon from "react-native-vector-icons/FontAwesome";
+  import IconMap from "react-native-vector-icons/Fontisto";
 
 const sizeIcon = Platform.OS === "ios" ? 22 : 25;
+const sizeIconMap = Platform.OS === "ios" ? 17 : 20;
 
 const EcoAffilliateRedeem = ({ navigation }: { navigation: any }) => {
   return (
@@ -65,9 +67,140 @@ const EcoAffilliateRedeem = ({ navigation }: { navigation: any }) => {
                 stylesM.widthRectangle,
                 stylesM.backgroundDarkGreen,
                 stylesM.boxWidth,
+                stylesO.boxWidth__heightInfo,
                 stylesM.radiusSixteen,
+                stylesL.flexColumn,
               ]}
-            ></View>
+            >
+              <View style={[stylesM.boxWidth_info, stylesL.JustifyAlign]}>
+                <View>
+                  <Image
+                    style={[stylesM.boxWidth_info_img]}
+                    source={require("./../../assets/img/redem.png")}
+                  />
+                </View>
+
+                <View>
+                  <Text
+                    style={[
+                      stylesM.textColorWhite,
+                      stylesM.fontSizeTwentyTwo,
+                      stylesM.textBold,
+                    ]}
+                  >
+                    Información General.
+                  </Text>
+                </View>
+              </View>
+
+              <View style={[stylesM.boxWidth_info, stylesL.flexRow]}>
+                <View
+                  style={[stylesM.boxWidth_info_logo, stylesL.JustifyAlign]}
+                >
+                  <View
+                    style={[
+                      stylesM.backgroundYellowGreen,
+                      stylesM.radiusSix,
+                      stylesL.JustifyAlign,
+                      stylesM.boxWidth_info_logo_img,
+                    ]}
+                  >
+                    <Text
+                      style={[
+                        stylesM.textColorDarkGreen,
+                        stylesM.textBold,
+                        stylesM.fontSizeSixteen,
+                      ]}
+                    >
+                      LOGO
+                    </Text>
+                  </View>
+                </View>
+
+                <View
+                  style={[
+                    stylesM.boxWidth_info_description,
+                    stylesL.Justify,
+                    stylesL.spaceBetween,
+                  ]}
+                >
+                  <Text
+                    style={[
+                      stylesM.fontSizeSixteen,
+                      stylesM.textColorYellowGreen,
+                      stylesM.textMedium,
+                    ]}
+                  >
+                    Nombre del establecimiento.
+                  </Text>
+                  <Text
+                    style={[
+                      stylesM.fontSizeSixteen,
+                      stylesM.textColorYellowGreen,
+                      stylesM.textMedium,
+                    ]}
+                  >
+                    Dirección del establecimiento.
+                  </Text>
+                  <Text
+                    style={[
+                      stylesM.fontSizeSixteen,
+                      stylesM.textColorYellowGreen,
+                      stylesM.textMedium,
+                    ]}
+                  >
+                    Categoría.
+                  </Text>
+                  <Text
+                    style={[
+                      stylesM.fontSizeSixteen,
+                      stylesM.textColorYellowGreen,
+                      stylesM.textMedium,
+                    ]}
+                  >
+                    Contacto.
+                  </Text>
+                </View>
+              </View>
+            </View>
+
+            <View
+              style={[
+                stylesM.widthRectangle,
+                stylesM.backgroundDarkGreen,
+                stylesM.boxWidth,
+                stylesO.boxWidth__heightMap,
+                stylesM.radiusTwenty,
+                stylesM.paddingHorizontalTwentySix,
+              ]}
+            >
+              <View style={[stylesL.flexRow]}>
+                <View style={[stylesM.boxMap, stylesL.Justify]}>
+                  <IconMap
+                    name="map-marker-alt"
+                    size={sizeIconMap}
+                    color="#ABCB59"
+                  />
+                </View>
+
+                <View style={[stylesM.boxTxtMap, stylesL.Justify]}>
+                  <Text
+                    style={[stylesM.textColorWhite, stylesM.fontSizeEighteen]}
+                  >
+                    Mapa para redimir tus ecopuntos.
+                  </Text>
+                </View>
+              </View>
+
+              <View
+                style={[stylesM.boxLocation]}
+              >
+                  <Image
+                    style={[stylesM.boxLocation_img, stylesM.radiusSixteen]}
+                    source={require("./../../assets/img/map.png")}
+                  />
+              </View>
+            </View>
           </ScrollView>
         </View>
       </SafeAreaView>

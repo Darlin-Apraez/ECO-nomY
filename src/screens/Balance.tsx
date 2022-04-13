@@ -239,7 +239,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
                 stylesL.Justify
               ]}
             >
-              <View style={[stylesL.flexRow, stylesM.boxEcoAffiliates_history]}>
+              <View style={[stylesL.flexRow, stylesL.spaceBetween]}>
                 <TouchableOpacity activeOpacity={0.5} style={[stylesM.boxEcoAffiliates_picture, stylesM.backgroundYellowGreen, stylesM.radiusFive]}></TouchableOpacity>
                 <TouchableOpacity activeOpacity={0.5} style={[stylesM.boxEcoAffiliates_picture, stylesM.backgroundYellowGreen, stylesM.radiusFive]}></TouchableOpacity>
                 <TouchableOpacity activeOpacity={0.5} style={[stylesM.boxEcoAffiliates_picture, stylesM.backgroundYellowGreen, stylesM.radiusFive]}></TouchableOpacity>
