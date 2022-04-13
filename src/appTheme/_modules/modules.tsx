@@ -29,8 +29,16 @@ export const stylesM = StyleSheet.create({
     color: "#4F2D17",
   },
 
+  textColorYellowGreen: {
+    color: "#ABCB59",
+  },
+
   textBold: {
     fontWeight: "bold",
+  },
+
+  textMedium: {
+    fontWeight: "500",
   },
 
   textLight: {
@@ -73,7 +81,7 @@ export const stylesM = StyleSheet.create({
     fontSize: RFValue(40),
   },
 
-  fontSizeSixtyFour:{
+  fontSizeSixtyFour: {
     fontSize: RFValue(53.5),
   },
 
@@ -93,7 +101,7 @@ export const stylesM = StyleSheet.create({
     backgroundColor: "#1F5326",
   },
 
-  backgroundGhostWhite:{
+  backgroundGhostWhite: {
     backgroundColor: "#E5E6F2",
   },
 
@@ -121,18 +129,27 @@ export const stylesM = StyleSheet.create({
     borderRadius: 16,
   },
 
+  radiusTwenty: {
+    borderRadius: 20,
+  },
+
   boxTitlePrincipal: {
     marginTop: RFValue(62),
   },
 
   boxSubTitlePrincipal: {
     marginTop: RFValue(38),
-    marginBottom: RFValue(10)
+    marginBottom: RFValue(10),
   },
 
   boxWidth: {
     height: RFValue(135),
     marginTop: RFValue(15.5),
+  },
+
+  paddingHorizontalTwentySix: {
+    paddingHorizontal: RFValue(21.5),
+    paddingVertical: RFValue(16),
   },
 
   // =====================================================================
@@ -293,11 +310,7 @@ export const stylesM = StyleSheet.create({
   boxEcoAffiliates: {
     height: RFValue(110.1),
     marginTop: RFValue(11),
-    padding:RFValue(12)
-  },
-
-  boxEcoAffiliates_history:{
-    justifyContent:'space-between'
+    padding: RFValue(12),
   },
 
   balanceButtons: {
@@ -317,42 +330,42 @@ export const stylesM = StyleSheet.create({
     width: "83%",
   },
 
-  boxAmount:{
-    height:'70%'
+  boxAmount: {
+    height: "70%",
   },
 
-  boxContributions:{
-    height:'30%'
+  boxContributions: {
+    height: "30%",
   },
 
-  boxEcoPoint_currency_total:{
-    width:'20%'
+  boxEcoPoint_currency_total: {
+    width: "20%",
   },
 
-  boxEcoPoint_amount:{
-    width:'50%',
-    paddingRight:15
+  boxEcoPoint_amount: {
+    width: "50%",
+    paddingRight: 15,
   },
 
-  boxEcoPoint_currency:{
-    width:'50%',
+  boxEcoPoint_currency: {
+    width: "50%",
   },
 
-  boxEcoPoint_currency_img:{
-    width:RFValue(93),
-    height:RFValue(93),
-    resizeMode:'contain',
+  boxEcoPoint_currency_img: {
+    width: RFValue(93),
+    height: RFValue(93),
+    resizeMode: "contain",
   },
 
-  boxEcoPoint_currency_contributions:{
-    width:RFValue(28.5),
-    height:RFValue(28.5),
-    resizeMode:'contain',
+  boxEcoPoint_currency_contributions: {
+    width: RFValue(28.5),
+    height: RFValue(28.5),
+    resizeMode: "contain",
   },
 
-  boxEcoAffiliates_picture:{
-    width:'18%',
-    height:RFValue(52),
+  boxEcoAffiliates_picture: {
+    width: "18%",
+    height: RFValue(52),
   },
   //End Balance
 
@@ -498,26 +511,71 @@ export const stylesM = StyleSheet.create({
 
   //End redem
 
+  //EcoAffilliateRedeem
+
+  boxWidth_info: {
+    height: "50%",
+  },
+
+  boxWidth_info_img: {
+    resizeMode: "contain",
+    width: RFValue(67),
+    height: RFValue(67),
+  },
+
+  boxWidth_info_logo: {
+    width: "35%",
+  },
+
+  boxWidth_info_logo_img: {
+    width: RFValue(77),
+    height: RFValue(77),
+  },
+
+  boxWidth_info_description: {
+    width: "65%",
+    paddingVertical: RFValue(12.5),
+  },
+
+  boxMap: {
+    width: "8%",
+  },
+
+  boxTxtMap: {
+    width: "92%",
+  },
+
+  boxLocation: {
+    width: "100%",
+    height: RFValue(209),
+    marginTop: RFValue(12.5),
+  },
+
+  boxLocation_img:{
+    resizeMode:'cover',
+    width:'100%',
+    height:'100%'
+  },
+  //End EcoAffilliateRedeem
+
   //Index
-  boxTitlePersonal:{
-    marginTop:RFValue(10),
+  boxTitlePersonal: {
+    marginTop: RFValue(10),
   },
 
-  boxBow:{
-    marginTop:RFValue(5),
+  boxBow: {
+    marginTop: RFValue(5),
   },
 
-  boxBow_image:{
+  boxBow_image: {
     width: RFValue(136),
     height: RFValue(78),
     resizeMode: "contain",
   },
 
-  boxCity:{
-    width:RFValue(270),
-    height:RFValue(185),
+  boxCity: {
+    width: RFValue(270),
+    height: RFValue(185),
   },
   //End Index
-
-  
 });

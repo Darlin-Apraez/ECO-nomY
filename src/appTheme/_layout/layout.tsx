@@ -31,9 +31,11 @@ export const stylesL = StyleSheet.create({
 
     alignItemsEnd:{
         alignItems: 'flex-end'
-    }
+    },
 
-    
+    spaceBetween: {
+        justifyContent: "space-between",
+    },
 
     
 });

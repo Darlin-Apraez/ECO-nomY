@@ -62,6 +62,15 @@ export const stylesO = StyleSheet.create({
     height:RFValue(235)
   },
 
+  boxWidth__heightInfo:{
+    height:RFValue(215),
+    padding:RFValue(8),
+  },
+
+  boxWidth__heightMap:{
+    height:RFValue(272.5),
+  },
+
   goBack__top:{
     marginTop:RFValue(0),
   },
