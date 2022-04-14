@@ -15,7 +15,9 @@ import {
 const sizeIcon = Platform.OS === "ios" ? 22 : 25;
 const sizeIconMap = Platform.OS === "ios" ? 17 : 20;
 
-const EcoAffilliateRedeem = ({ navigation }: { navigation: any }) => {
+const EcoAffilliateRedeem = ({ navigation, route }: { navigation: any; route: any }) => {
+  const titleMsg = route.params?.msg;
+  
   return (
     <LinearGradient
       colors={["#38AA35", "#1F5326"]}
@@ -41,7 +43,7 @@ const EcoAffilliateRedeem = ({ navigation }: { navigation: any }) => {
                 stylesM.textBold,
               ]}
             >
-              ECO Afiliado 1.
+              {titleMsg}
             </Text>
           </View>
 
@@ -192,13 +194,11 @@ const EcoAffilliateRedeem = ({ navigation }: { navigation: any }) => {
                 </View>
               </View>
 
-              <View
-                style={[stylesM.boxLocation]}
-              >
-                  <Image
-                    style={[stylesM.boxLocation_img, stylesM.radiusSixteen]}
-                    source={require("./../../assets/img/map.png")}
-                  />
+              <View style={[stylesM.boxLocation]}>
+                <Image
+                  style={[stylesM.boxLocation_img, stylesM.radiusSixteen]}
+                  source={require("./../../assets/img/map.png")}
+                />
               </View>
             </View>
           </ScrollView>

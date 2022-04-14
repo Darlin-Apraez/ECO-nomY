@@ -58,32 +58,32 @@ export const stylesO = StyleSheet.create({
     right: RFValue(22),
   },
 
-  boxWidth__height:{
-    height:RFValue(235)
+  boxWidth__height: {
+    height: RFValue(235),
   },
 
-  boxWidth__heightInfo:{
-    height:RFValue(215),
-    padding:RFValue(8),
+  boxWidth__heightInfo: {
+    height: RFValue(215),
+    padding: RFValue(8),
   },
 
-  boxWidth__heightMap:{
-    height:RFValue(272.5),
+  boxWidth__heightMap: {
+    height: RFValue(272.5),
   },
 
-  goBack__top:{
-    marginTop:RFValue(0),
+  goBack__top: {
+    marginTop: RFValue(0),
   },
 
-  boxWidth__heightHistory:{
-    height:301
+  boxWidth__heightHistory: {
+    height: RFValue(252),
   },
 
-  boxWidth__heightCall:{
-    height:252
+  boxWidth__heightCall: {
+    height: RFValue(210),
   },
 
-  boxWidth__heightExchange:{
-    height:552
-  }
+  boxWidth__heightExchange: {
+    height: RFValue(465),
+  },
 });
