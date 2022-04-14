@@ -5,10 +5,17 @@ import {
   stylesO,
   stylesS,
 } from "./../appTheme/styles/styles";
-import { View, Text, SafeAreaView, ScrollView, Image } from "react-native";
+import { View, Text, SafeAreaView, ScrollView, Image, Platform, TouchableOpacity } from "react-native";
 import BarStatus from "../components/BarStatus";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
+import IconEco from "react-native-vector-icons/MaterialIcons";
+import IconCheck from "react-native-vector-icons/Entypo";
+import IconMap from "react-native-vector-icons/Fontisto";
+
+const sizeIconMap = Platform.OS === "ios" ? 17 : 20;
+const sizeIconEco = Platform.OS === "ios" ? 27 : 30;
+const sizeIconCheck = Platform.OS === "ios" ? 27 : 23;
 
 const SustainableActions = () => {
   return (
@@ -53,7 +60,7 @@ const SustainableActions = () => {
           </View>
 
           <ScrollView
-            contentContainerStyle={{ marginTop:10, bottom: 25 }}
+            contentContainerStyle={{ marginTop: 10, bottom: 25 }}
             horizontal={false}
             showsVerticalScrollIndicator={false}
           >
@@ -64,8 +71,250 @@ const SustainableActions = () => {
                 stylesM.boxWidth,
                 stylesO.boxWidth__heightHistory,
                 stylesM.radiusFive,
+                stylesM.paddingHorizontalTwentySix,
+                stylesL.flexColumn,
               ]}
-            ></View>
+            >
+              <ScrollView
+                nestedScrollEnabled={true}
+                horizontal={false}
+                showsVerticalScrollIndicator={true}
+              >
+                <View
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <IconEco name="eco" size={sizeIconEco} color="#ABCB59" />
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Bike - 30 Min
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconCheck
+                      name="check"
+                      size={sizeIconCheck}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </View>
+
+                <View
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <IconEco name="eco" size={sizeIconEco} color="#ABCB59" />
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Bike - 30 Min
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconCheck
+                      name="check"
+                      size={sizeIconCheck}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </View>
+
+                <View
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <IconMap
+                      name="map-marker-alt"
+                      size={sizeIconMap}
+                      color="#ABCB59"
+                    />
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      Reforestación - 3 Arboles
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconCheck
+                      name="check"
+                      size={sizeIconCheck}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </View>
+
+                <View
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <IconMap
+                      name="map-marker-alt"
+                      size={sizeIconMap}
+                      color="#ABCB59"
+                    />
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      Jornada de limpieza a reservanatural
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconCheck
+                      name="check"
+                      size={sizeIconCheck}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </View>
+
+                <View
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <IconMap
+                      name="map-marker-alt"
+                      size={sizeIconMap}
+                      color="#ABCB59"
+                    />
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      Reforestación - 2 Arboles
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconCheck
+                      name="check"
+                      size={sizeIconCheck}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </View>
+
+                <View
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <IconEco name="eco" size={sizeIconEco} color="#ABCB59" />
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Bike - 30 Min
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconCheck
+                      name="check"
+                      size={sizeIconCheck}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </View>
+              </ScrollView>
+            </View>
 
             <View style={stylesM.boxAddition}>
               <Text
@@ -86,8 +335,50 @@ const SustainableActions = () => {
                 stylesM.boxWidth,
                 stylesO.boxWidth__heightCall,
                 stylesM.radiusSeven,
+                stylesM.paddingHorizontalTwentySix,
+                stylesL.flexColumn,
               ]}
-            ></View>
+            >
+              <ScrollView nestedScrollEnabled={true} horizontal={false}>
+                <View style={[stylesM.boxWidth_working]}>
+                  <View>
+                    <Text
+                      style={[stylesM.textColorWhite, stylesM.fontSizeTwelve]}
+                    >
+                      Jornada de reforestación
+                    </Text>
+                  </View>
+                  <TouchableOpacity
+                    activeOpacity={0.5}
+                    style={[stylesM.boxWidth_working_img]}
+                  >
+                    <Image
+                      style={[stylesM.boxLocation_img, stylesM.radiusSixteen]}
+                      source={require("./../../assets/img/reforestation.png")}
+                    />
+                  </TouchableOpacity>
+                </View>
+
+                <View style={[stylesM.boxWidth_working]}>
+                  <View>
+                    <Text
+                      style={[stylesM.textColorWhite, stylesM.fontSizeTwelve]}
+                    >
+                      Jornada de limpieza a reserva natural
+                    </Text>
+                  </View>
+                  <TouchableOpacity
+                    activeOpacity={0.5}
+                    style={[stylesM.boxWidth_working_img]}
+                  >
+                    <Image
+                      style={[stylesM.boxLocation_img, stylesM.radiusSixteen]}
+                      source={require("./../../assets/img/reserve.png")}
+                    />
+                  </TouchableOpacity>
+                </View>
+              </ScrollView>
+            </View>
           </ScrollView>
         </View>
       </SafeAreaView>

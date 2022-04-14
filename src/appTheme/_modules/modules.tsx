@@ -125,6 +125,10 @@ export const stylesM = StyleSheet.create({
     borderRadius: 7,
   },
 
+  radiusTen: {
+    borderRadius: 10,
+  },
+
   radiusSixteen: {
     borderRadius: 16,
   },
@@ -500,8 +504,33 @@ export const stylesM = StyleSheet.create({
     marginTop: RFValue(15.5),
   },
 
+  boxHistory: {
+    width: "100%",
+    height: RFValue(38.5),
+    marginBottom: RFValue(12.5),
+  },
 
+  boxHistory_iconLeft: {
+    width: "15%",
+  },
 
+  boxHistory_txt: {
+    width: "73%",
+  },
+
+  boxHistory_iconRight: {
+    width: "12%",
+  },
+
+  boxWidth_working: {
+    marginBottom: RFValue(8),
+  },
+
+  boxWidth_working_img: {
+    width: "100%",
+    height: RFValue(71),
+    marginTop: RFValue(4),
+  },
   //End Sustainable Actions
 
   //Redem
@@ -509,6 +538,11 @@ export const stylesM = StyleSheet.create({
     height: RFValue(105),
     width: RFValue(105),
     resizeMode: "contain",
+  },
+
+  boxHistory_logo: {
+    width: RFValue(20),
+    height: RFValue(20),
   },
 
   //End redem
@@ -553,10 +587,10 @@ export const stylesM = StyleSheet.create({
     marginTop: RFValue(12.5),
   },
 
-  boxLocation_img:{
-    resizeMode:'cover',
-    width:'100%',
-    height:'100%'
+  boxLocation_img: {
+    resizeMode: "cover",
+    width: "100%",
+    height: "100%",
   },
   //End EcoAffilliateRedeem
 

@@ -5,10 +5,13 @@ import {
   stylesO,
   stylesS,
 } from "./../appTheme/styles/styles";
-import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity } from "react-native";
+import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity, Platform } from "react-native";
 import BarStatus from "../components/BarStatus";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
+import IconStart from "react-native-vector-icons/AntDesign";
+
+const sizeIconStart = Platform.OS === "ios" ? 17 : 20;
 
 const RedeemECOpoints = ({ navigation }: { navigation: any }) => {
   return (
@@ -59,17 +62,513 @@ const RedeemECOpoints = ({ navigation }: { navigation: any }) => {
             horizontal={false}
             showsVerticalScrollIndicator={false}
           >
-            <TouchableOpacity
-              activeOpacity={0.5}
+            <View
               style={[
                 stylesM.widthRectangle,
                 stylesM.backgroundYellowGreen,
                 stylesM.boxWidth,
                 stylesO.boxWidth__heightExchange,
                 stylesM.radiusFive,
+                stylesM.paddingHorizontalTwentySix,
+                stylesL.flexColumn,
               ]}
-              onPress={() => navigation.navigate("EcoAffilliateRedeem")}
-            ></TouchableOpacity>
+            >
+              <ScrollView
+                nestedScrollEnabled={true}
+                horizontal={false}
+                showsVerticalScrollIndicator={true}
+              >
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                  onPress={() =>
+                    navigation.navigate("EcoAffilliateRedeem", {
+                      msg: "ECO Afiliado 1.",
+                    })
+                  }
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <View
+                      style={[
+                        stylesM.boxHistory_logo,
+                        stylesM.backgroundYellowGreen,
+                        stylesM.radiusTen,
+                      ]}
+                    ></View>
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Afiliado 1.
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconStart
+                      name="staro"
+                      size={sizeIconStart}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                  onPress={() =>
+                    navigation.navigate("EcoAffilliateRedeem", {
+                      msg: "ECO Afiliado 2.",
+                    })
+                  }
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <View
+                      style={[
+                        stylesM.boxHistory_logo,
+                        stylesM.backgroundYellowGreen,
+                        stylesM.radiusTen,
+                      ]}
+                    ></View>
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Afiliado 2.
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconStart
+                      name="staro"
+                      size={sizeIconStart}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                  onPress={() =>
+                    navigation.navigate("EcoAffilliateRedeem", {
+                      msg: "ECO Afiliado 3.",
+                    })
+                  }
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <View
+                      style={[
+                        stylesM.boxHistory_logo,
+                        stylesM.backgroundYellowGreen,
+                        stylesM.radiusTen,
+                      ]}
+                    ></View>
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Afiliado 3.
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconStart
+                      name="staro"
+                      size={sizeIconStart}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                  onPress={() =>
+                    navigation.navigate("EcoAffilliateRedeem", {
+                      msg: "ECO Afiliado 4.",
+                    })
+                  }
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <View
+                      style={[
+                        stylesM.boxHistory_logo,
+                        stylesM.backgroundYellowGreen,
+                        stylesM.radiusTen,
+                      ]}
+                    ></View>
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Afiliado 4.
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconStart
+                      name="staro"
+                      size={sizeIconStart}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                  onPress={() =>
+                    navigation.navigate("EcoAffilliateRedeem", {
+                      msg: "ECO Afiliado 5.",
+                    })
+                  }
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <View
+                      style={[
+                        stylesM.boxHistory_logo,
+                        stylesM.backgroundYellowGreen,
+                        stylesM.radiusTen,
+                      ]}
+                    ></View>
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Afiliado 5.
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconStart
+                      name="staro"
+                      size={sizeIconStart}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                  onPress={() =>
+                    navigation.navigate("EcoAffilliateRedeem", {
+                      msg: "ECO Afiliado 6.",
+                    })
+                  }
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <View
+                      style={[
+                        stylesM.boxHistory_logo,
+                        stylesM.backgroundYellowGreen,
+                        stylesM.radiusTen,
+                      ]}
+                    ></View>
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Afiliado 6.
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconStart
+                      name="staro"
+                      size={sizeIconStart}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                  onPress={() =>
+                    navigation.navigate("EcoAffilliateRedeem", {
+                      msg: "ECO Afiliado 7.",
+                    })
+                  }
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <View
+                      style={[
+                        stylesM.boxHistory_logo,
+                        stylesM.backgroundYellowGreen,
+                        stylesM.radiusTen,
+                      ]}
+                    ></View>
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Afiliado 7.
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconStart
+                      name="staro"
+                      size={sizeIconStart}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                  onPress={() =>
+                    navigation.navigate("EcoAffilliateRedeem", {
+                      msg: "ECO Afiliado 8.",
+                    })
+                  }
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <View
+                      style={[
+                        stylesM.boxHistory_logo,
+                        stylesM.backgroundYellowGreen,
+                        stylesM.radiusTen,
+                      ]}
+                    ></View>
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Afiliado 8.
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconStart
+                      name="staro"
+                      size={sizeIconStart}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                  onPress={() =>
+                    navigation.navigate("EcoAffilliateRedeem", {
+                      msg: "ECO Afiliado 9.",
+                    })
+                  }
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <View
+                      style={[
+                        stylesM.boxHistory_logo,
+                        stylesM.backgroundYellowGreen,
+                        stylesM.radiusTen,
+                      ]}
+                    ></View>
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Afiliado 9.
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconStart
+                      name="staro"
+                      size={sizeIconStart}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  style={[
+                    stylesM.boxHistory,
+                    stylesM.backgroundDarkGreen,
+                    stylesM.radiusSeven,
+                    stylesL.flexRow,
+                  ]}
+                  onPress={() =>
+                    navigation.navigate("EcoAffilliateRedeem", {
+                      msg: "ECO Afiliado 10.",
+                    })
+                  }
+                >
+                  <View
+                    style={[stylesM.boxHistory_iconLeft, stylesL.JustifyAlign]}
+                  >
+                    <View
+                      style={[
+                        stylesM.boxHistory_logo,
+                        stylesM.backgroundYellowGreen,
+                        stylesM.radiusTen,
+                      ]}
+                    ></View>
+                  </View>
+
+                  <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeEighteen,
+                        stylesM.textMedium,
+                      ]}
+                    >
+                      ECO Afiliado 10.
+                    </Text>
+                  </View>
+
+                  <View
+                    style={[stylesM.boxHistory_iconRight, stylesL.JustifyAlign]}
+                  >
+                    <IconStart
+                      name="staro"
+                      size={sizeIconStart}
+                      color="#ABCB59"
+                    />
+                  </View>
+                </TouchableOpacity>
+              </ScrollView>
+            </View>
           </ScrollView>
         </View>
       </SafeAreaView>
