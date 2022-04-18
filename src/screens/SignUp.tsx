@@ -22,6 +22,7 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import IconX from "react-native-vector-icons/Foundation";
 import IconCheck from "react-native-vector-icons/MaterialCommunityIcons";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 
 const sizeIcon = Platform.OS === "ios" ? 22 : 25;
 const sizeIconX = Platform.OS === "ios" ? 28 : 30;
@@ -31,6 +32,35 @@ const SignUp = ({ navigation }: { navigation: any }) => {
   const [textPass, setTextPass] = useState("");
   const [textConfirmPass, setTextConfirmPass] = useState("");
   const [check, setCheck] = useState(false);
+
+  async function SignUp() {
+
+    const auth = getAuth();
+
+    if (textPass == textConfirmPass) {
+
+      await createUserWithEmailAndPassword(auth, textEmail, textPass)
+      .then(navigation.navigate("Login"))
+      .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      sendEmailVerification(user);
+      console.log(user.uid);
+      // ...
+      })
+      .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage)
+      // ..
+      });
+      
+    } else {
+      alert("Passwords do not match")
+      
+    }
+    
+  }
 
   return (
     <LinearGradient
@@ -269,7 +299,7 @@ const SignUp = ({ navigation }: { navigation: any }) => {
                   stylesM.backgroundYellowGreen,
                   stylesL.JustifyAlign,
                 ]}
-                onPress={() => navigation.navigate("DrawerApp")}
+                onPress={() => SignUp()}
               >
                 <Text
                   style={[
