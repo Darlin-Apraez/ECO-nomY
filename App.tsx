@@ -28,6 +28,7 @@ import SignUp from "./src/screens/SignUp";
 import Index from "./src/screens/Index";
 import CustomDrawer from "./src/components/CustomDrawer";
 import EcoAffilliateRedeem from "./src/screens/EcoAffilliateRedeem";
+import { initializeApp } from "firebase/app";
 
 const Tab = createBottomTabNavigator();
 const barIos = Platform.OS === "ios" ? 61 : 50;
@@ -114,6 +115,22 @@ function DrawerApp() {
 
 export default function App() {
   const Stack = createStackNavigator();
+  // Credential firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyBOy0Kxcon-6Rm3lqD-uthNjP2VPxE6ha8",
+    authDomain: "economy-13078.firebaseapp.com",
+    databaseURL: "https://economy-13078-default-rtdb.firebaseio.com",
+    projectId: "economy-13078",
+    storageBucket: "economy-13078.appspot.com",
+    messagingSenderId: "774508910305",
+    appId: "1:774508910305:web:08a86780b91e28f24a89a0",
+    measurementId: "G-2905NCPSS8"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  console.log(app);
+  
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -134,6 +151,11 @@ export default function App() {
         <Stack.Screen
           name="Login"
           component={Login}
+          options={{ headerShown: false }}
+        />
+          <Stack.Screen
+          name="Balance"
+          component={Balance}
           options={{ headerShown: false }}
         />
         <Stack.Screen

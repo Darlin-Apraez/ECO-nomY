@@ -23,11 +23,15 @@ import { LinearGradient } from "expo-linear-gradient";
 import IconUser from "react-native-vector-icons/FontAwesome";
 import IconCopy from "react-native-vector-icons/Ionicons";
 import IconButtons from "react-native-vector-icons/Feather";
+import { getAuth } from "firebase/auth";
 
 const sizeIcon = Platform.OS === "ios" ? 22 : 25;
 const sizeIconButtons = Platform.OS === "ios" ? 22 : 35;
 
 const Balance = ({ navigation }: { navigation: any }) => {
+  //firebase
+  const userEmail = getAuth().currentUser?.email
+
   //copy icons
   const [copy, setCopy] = useState(
     <IconCopy name="copy-outline" size={15} color="#fff" />
@@ -135,7 +139,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
                     stylesM.fontSizeEighteen,
                   ]}
                 >
-                  email001@gmail.com
+                  {userEmail}
                 </Text>
               </View>
               <View
