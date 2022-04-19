@@ -86,7 +86,7 @@ export const stylesM = StyleSheet.create({
   },
 
   backgroundRed: {
-    backgroundColor: "red",
+    backgroundColor: "#764129",
   },
 
   backgroundWhite: {

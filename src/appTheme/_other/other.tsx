@@ -86,4 +86,9 @@ export const stylesO = StyleSheet.create({
   boxWidth__heightExchange: {
     height: RFValue(465),
   },
+
+  boxHistory_logo__red:{
+    width: RFValue(15),
+    height: RFValue(15),
+  }
 });

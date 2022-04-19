@@ -58,7 +58,11 @@ function CustomDrawer({ navigation }: { navigation: any }) {
         </TouchableOpacity>
       </View>
 
-      <View style={[stylesL.flexRow, stylesM.notiMenuLeft]}>
+      <TouchableOpacity
+        activeOpacity={0.5}
+        onPress={() => navigation.navigate("Notifications")}
+        style={[stylesL.flexRow, stylesM.notiMenuLeft]}
+      >
         <View style={stylesM.notiMenuLeft_width}>
           <Image
             style={stylesM.notiMenuLeft_icono}
@@ -66,7 +70,7 @@ function CustomDrawer({ navigation }: { navigation: any }) {
           />
         </View>
         <View style={stylesM.notiMenuLeft_widthTwo}>
-          <TouchableOpacity>
+          <View>
             <Text
               style={[
                 stylesM.textColorWhite,
@@ -77,9 +81,9 @@ function CustomDrawer({ navigation }: { navigation: any }) {
             >
               Notificaciones.
             </Text>
-          </TouchableOpacity>
+          </View>
         </View>
-      </View>
+      </TouchableOpacity>
 
       <View style={[stylesL.flexRow, stylesM.transactionMenuLeft]}>
         <View style={stylesM.transactionMenuLeft_width}>

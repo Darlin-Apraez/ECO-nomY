@@ -28,6 +28,7 @@ import SignUp from "./src/screens/SignUp";
 import Index from "./src/screens/Index";
 import CustomDrawer from "./src/components/CustomDrawer";
 import EcoAffilliateRedeem from "./src/screens/EcoAffilliateRedeem";
+import Notifications from "./src/screens/Notifications";
 import { initializeApp } from "firebase/app";
 
 const Tab = createBottomTabNavigator();
@@ -191,6 +192,11 @@ export default function App() {
         <Stack.Screen
           name="Index"
           component={Index}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Notifications"
+          component={Notifications}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
