@@ -44,7 +44,7 @@ const Login = ({ navigation }: { navigation: any }) => {
     if (user.emailVerified == false) {
       alert("your account has not been verified, please check your email")
       } else {
-      navigation.navigate("Balance") 
+      navigation.navigate("DrawerApp") 
       }
     })
     .then(
