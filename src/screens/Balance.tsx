@@ -41,21 +41,6 @@ const Balance = ({ navigation }: { navigation: any }) => {
     <IconCopy name="copy-outline" size={15} color="#fff" />
   );
 
-  const CopyEmail = () => {
-    Clipboard.setString("email001@gmail.com");
-    if (Platform.OS === "android") {
-      ToastAndroid.show("Correo copiado", ToastAndroid.SHORT);
-    } else {
-      Alert.alert("Correo copiado");
-    }
-
-    setTimeout(() => {
-      setCopy(<IconCopy name="copy-sharp" size={15} color="#fff" />);
-      setTimeout(() => {
-        setCopy(<IconCopy name="copy-outline" size={15} color="#fff" />);
-      }, 500);
-    });
-  };
 
   const CopyWallet = () => {
     Clipboard.setString("9zkw97JC6ENa4PuQJAJMjnj989R2XWbAxc9onLco3LZ3");
@@ -142,21 +127,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
                   {userEmail}
                 </Text>
               </View>
-              <View
-                style={[
-                  stylesM.widthRectangle,
-                  stylesM.boxCopy,
-                  stylesL.alignItemsEnd,
-                ]}
-              >
-                <TouchableOpacity
-                  activeOpacity={0.5}
-                  style={[stylesM.copyButton, stylesL.JustifyAlign]}
-                  onPress={() => CopyEmail()}
-                >
-                  {copy}
-                </TouchableOpacity>
-              </View>
+              
               <View>
                 <Text
                   style={[
