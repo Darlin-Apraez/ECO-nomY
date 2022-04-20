@@ -30,6 +30,7 @@ import CustomDrawer from "./src/components/CustomDrawer";
 import EcoAffilliateRedeem from "./src/screens/EcoAffilliateRedeem";
 import Notifications from "./src/screens/Notifications";
 import Receive from "./src/screens/Receive";
+
 import { initializeApp } from "firebase/app";
 
 const Tab = createBottomTabNavigator();
