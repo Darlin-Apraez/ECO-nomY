@@ -38,7 +38,7 @@ const SignUp = ({ navigation }: { navigation: any }) => {
     const auth = getAuth();
 
     if (textPass == textConfirmPass) {
-
+      
       await createUserWithEmailAndPassword(auth, textEmail, textPass)
       .then(navigation.navigate("Login"))
       .then((userCredential) => {
@@ -51,13 +51,24 @@ const SignUp = ({ navigation }: { navigation: any }) => {
       .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      alert(errorMessage)
-      // ..
+      
+      console.log(errorMessage);
+      
+      if (errorMessage == "Firebase: Error (auth/invalid-email).") {
+        alert("Formato de correo inválido") 
+      }
+      if (errorMessage =="Firebase: Password should be at least 6 characters (auth/weak-password)." ) {
+        alert("La contraseña debe tener mínimo 6 caracteres")
+      }
+      if (errorMessage == "Firebase: Error (auth/missing-email).") {
+        alert("Escribe tu correo electronico")
+      }
+  
       });
       
-    } else {
-      alert("Passwords do not match")
-      
+    } 
+      else {
+        alert("Las contraseñas no coinciden")
     }
     
   }
