@@ -50,7 +50,7 @@ export const stylesO = StyleSheet.create({
   },
 
   boxCopy__top: {
-    top: RFValue(85),
+    top: RFValue(82),
   },
 
   boxImagePrincipal__top: {
@@ -87,8 +87,28 @@ export const stylesO = StyleSheet.create({
     height: RFValue(465),
   },
 
-  boxHistory_logo__red:{
+  boxHistory_logo__red: {
     width: RFValue(15),
     height: RFValue(15),
-  }
+  },
+
+  boxTitlePrincipal__bottom: {
+    marginBottom: RFValue(32),
+    
+  },
+
+  boxWidth__qr: {
+    width: RFValue(285),
+    height: RFValue(280),
+  },
+
+  botonGeneral__border: {
+    borderColor: "white",
+    borderWidth: 2,
+    elevation: 0,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0,
+    shadowRadius: 0,
+  },
 });

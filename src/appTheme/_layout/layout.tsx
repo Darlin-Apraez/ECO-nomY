@@ -37,5 +37,10 @@ export const stylesL = StyleSheet.create({
         justifyContent: "space-between",
     },
 
+    textAlignCenter:{
+        textAlign: "center"
+    },
+   
+
     
 });

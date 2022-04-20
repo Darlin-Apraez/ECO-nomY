@@ -614,4 +614,29 @@ export const stylesM = StyleSheet.create({
     height: RFValue(185),
   },
   //End Index
+
+  //Receive
+  boxScanner: {
+    width: RFValue(200),
+    marginTop: RFValue(18),
+  },
+
+  boxBotonButtom: {
+    position: "absolute",
+    bottom: RFValue(71.5),
+  },
+
+  boxBotonButtom_address:{
+    bottom: RFValue(12),
+  },
+
+  botonGeneral_key:{
+    width: "70%"
+  },
+
+  botonGeneral_copy:{ 
+    width: "30%", 
+    paddingLeft:RFValue(12)
+  }
+  //End Receive
 });

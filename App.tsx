@@ -29,6 +29,7 @@ import Index from "./src/screens/Index";
 import CustomDrawer from "./src/components/CustomDrawer";
 import EcoAffilliateRedeem from "./src/screens/EcoAffilliateRedeem";
 import Notifications from "./src/screens/Notifications";
+import Receive from "./src/screens/Receive";
 import { initializeApp } from "firebase/app";
 
 const Tab = createBottomTabNavigator();
@@ -130,7 +131,6 @@ export default function App() {
   
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  console.log(app);
   
   return (
     <NavigationContainer>
@@ -154,7 +154,7 @@ export default function App() {
           component={Login}
           options={{ headerShown: false }}
         />
-          <Stack.Screen
+        <Stack.Screen
           name="Balance"
           component={Balance}
           options={{ headerShown: false }}
@@ -197,6 +197,11 @@ export default function App() {
         <Stack.Screen
           name="Notifications"
           component={Notifications}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Receive"
+          component={Receive}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
