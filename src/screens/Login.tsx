@@ -24,6 +24,7 @@ import IconCheck from "react-native-vector-icons/MaterialCommunityIcons";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { getDatabase, ref, set } from "firebase/database";
+import { createAccount } from "../../controller";
 
 const sizeIcon = Platform.OS === "ios" ? 22 : 25;
 const sizeIconX = Platform.OS === "ios" ? 28 : 30;
@@ -32,6 +33,17 @@ const Login = ({ navigation }: { navigation: any }) => {
   const [textEmail, setTextEmail] = useState("");
   const [textPass, setTextPass] = useState("");
   const [check, setCheck] = useState(false);
+
+  //Create account
+  async function create_account() {
+    const acc = createAccount();
+    
+    acc.then((value) => {
+      setTimeout(() => {
+        console.log(value);
+      }, 2000);
+    })
+  }
 
   async function Login() {
 
