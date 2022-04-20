@@ -24,13 +24,32 @@ import IconUser from "react-native-vector-icons/FontAwesome";
 import IconCopy from "react-native-vector-icons/Ionicons";
 import IconButtons from "react-native-vector-icons/Feather";
 import { getAuth } from "firebase/auth";
+import { getDatabase, ref, child, get } from "firebase/database";
 
 const sizeIcon = Platform.OS === "ios" ? 22 : 25;
 const sizeIconButtons = Platform.OS === "ios" ? 22 : 35;
 
 const Balance = ({ navigation }: { navigation: any }) => {
+  
+
   //firebase
+  const [nickUser,setNickUser] = useState("");
   const userEmail = getAuth().currentUser?.email
+  const idUser = getAuth().currentUser?.uid
+  const dbRef = ref(getDatabase());
+  get(child(dbRef, `users/${idUser}`)).then((snapshot) => {
+  if (snapshot.exists()) {
+     const nickUser = snapshot.val().nickname;
+     setNickUser(nickUser)
+      console.log(nickUser);
+ 
+    
+  } else {
+    console.log("No data available");
+  }
+  }).catch((error) => {
+  console.error(error);
+  });
 
   //copy icons
   const [copy, setCopy] = useState(
@@ -113,7 +132,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
                     stylesM.fontSizeEighteen,
                   ]}
                 >
-                  ECO Friend 001
+                  {nickUser}
                 </Text>
               </View>
               <View>
