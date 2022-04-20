@@ -8,6 +8,8 @@ import {
 import { RFValue } from "react-native-responsive-fontsize";
 
 const fontSizeTwelveIos = Platform.OS === "ios" ? 8.5 : 10;
+const copyIos = Platform.OS === "ios" ? '23%' : '30%';
+const keyIos = Platform.OS === "ios" ? '77%' : '70%';
 
 export const stylesM = StyleSheet.create({
   // =====================================================================
@@ -631,11 +633,11 @@ export const stylesM = StyleSheet.create({
   },
 
   botonGeneral_key:{
-    width: "70%"
+    width: keyIos
   },
 
   botonGeneral_copy:{ 
-    width: "30%", 
+    width: copyIos, 
     paddingLeft:RFValue(12)
   }
   //End Receive
