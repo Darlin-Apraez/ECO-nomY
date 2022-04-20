@@ -127,7 +127,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
                   {userEmail}
                 </Text>
               </View>
-              
+
               <View>
                 <Text
                   style={[
@@ -139,7 +139,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
                   Billetera: {concatenado}
                 </Text>
               </View>
-              <View
+              {/* <View
                 style={[
                   stylesM.widthRectangle,
                   stylesM.boxCopy,
@@ -154,7 +154,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
                 >
                   {copyWallet}
                 </TouchableOpacity>
-              </View>
+              </View> */}
             </LinearGradient>
 
             <View
@@ -168,7 +168,13 @@ const Balance = ({ navigation }: { navigation: any }) => {
               ]}
             >
               <View style={[stylesL.flexRow, stylesM.boxAmount]}>
-                <View style={[stylesM.boxEcoPoint_amount, stylesL.alignItemsEnd, stylesL.Justify]}>
+                <View
+                  style={[
+                    stylesM.boxEcoPoint_amount,
+                    stylesL.alignItemsEnd,
+                    stylesL.Justify,
+                  ]}
+                >
                   <Text
                     style={[stylesM.textColorWhite, stylesM.fontSizeSixtyFour]}
                   >
@@ -184,18 +190,42 @@ const Balance = ({ navigation }: { navigation: any }) => {
               </View>
 
               <View style={[stylesL.flexRow, stylesM.boxContributions]}>
-                <View style={[stylesM.boxEcoPoint_amount, stylesL.alignItemsEnd, stylesL.Justify]}>
+                <View
+                  style={[
+                    stylesM.boxEcoPoint_amount,
+                    stylesL.alignItemsEnd,
+                    stylesL.Justify,
+                  ]}
+                >
                   <Text
-                    style={[stylesM.textColorWhite, stylesM.fontSizeSixteen, stylesM.textBold]}
+                    style={[
+                      stylesM.textColorWhite,
+                      stylesM.fontSizeSixteen,
+                      stylesM.textBold,
+                    ]}
                   >
                     Contribuciones:
                   </Text>
                 </View>
                 <View style={[stylesM.boxEcoPoint_currency, stylesL.flexRow]}>
-                  <View style={[{width:'20%'}, stylesL.Justify, stylesL.alignItemsEnd]}>
-                    <Text style={[stylesM.textColorWhite, stylesM.fontSizeTwentyFour, stylesM.textBold]}>51</Text>
+                  <View
+                    style={[
+                      { width: "20%" },
+                      stylesL.Justify,
+                      stylesL.alignItemsEnd,
+                    ]}
+                  >
+                    <Text
+                      style={[
+                        stylesM.textColorWhite,
+                        stylesM.fontSizeTwentyFour,
+                        stylesM.textBold,
+                      ]}
+                    >
+                      51
+                    </Text>
                   </View>
-                  <View style={[{width:'20%'}, stylesL.Justify]}>
+                  <View style={[{ width: "20%" }, stylesL.Justify]}>
                     <Image
                       style={stylesM.boxEcoPoint_currency_contributions}
                       source={require("./../../assets/img/contributions.png")}
@@ -211,14 +241,42 @@ const Balance = ({ navigation }: { navigation: any }) => {
                 stylesM.radiusSeven,
                 stylesM.widthRectangle,
                 stylesM.backgroundDarkGreen,
-                stylesL.Justify
+                stylesL.Justify,
               ]}
             >
               <View style={[stylesL.flexRow, stylesL.spaceBetween]}>
-                <TouchableOpacity activeOpacity={0.5} style={[stylesM.boxEcoAffiliates_picture, stylesM.backgroundYellowGreen, stylesM.radiusFive]}></TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.5} style={[stylesM.boxEcoAffiliates_picture, stylesM.backgroundYellowGreen, stylesM.radiusFive]}></TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.5} style={[stylesM.boxEcoAffiliates_picture, stylesM.backgroundYellowGreen, stylesM.radiusFive]}></TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.5} style={[stylesM.boxEcoAffiliates_picture, stylesM.backgroundYellowGreen, stylesM.radiusFive]}></TouchableOpacity>
+                <TouchableOpacity
+                  activeOpacity={0.5}
+                  style={[
+                    stylesM.boxEcoAffiliates_picture,
+                    stylesM.backgroundYellowGreen,
+                    stylesM.radiusFive,
+                  ]}
+                ></TouchableOpacity>
+                <TouchableOpacity
+                  activeOpacity={0.5}
+                  style={[
+                    stylesM.boxEcoAffiliates_picture,
+                    stylesM.backgroundYellowGreen,
+                    stylesM.radiusFive,
+                  ]}
+                ></TouchableOpacity>
+                <TouchableOpacity
+                  activeOpacity={0.5}
+                  style={[
+                    stylesM.boxEcoAffiliates_picture,
+                    stylesM.backgroundYellowGreen,
+                    stylesM.radiusFive,
+                  ]}
+                ></TouchableOpacity>
+                <TouchableOpacity
+                  activeOpacity={0.5}
+                  style={[
+                    stylesM.boxEcoAffiliates_picture,
+                    stylesM.backgroundYellowGreen,
+                    stylesM.radiusFive,
+                  ]}
+                ></TouchableOpacity>
               </View>
             </View>
 
@@ -261,7 +319,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
                 stylesL.flexRow,
                 stylesM.balanceButtons,
               ]}
-              // onPress={() => navigation.navigate("Balance")}
+              onPress={() => navigation.navigate("Receive")}
             >
               <View style={[stylesM.balanceButtons_icon, stylesL.JustifyAlign]}>
                 <Image
