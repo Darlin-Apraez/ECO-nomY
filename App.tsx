@@ -130,7 +130,7 @@ export default function App() {
   
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  console.log(app);
+ 
   
   return (
     <NavigationContainer>

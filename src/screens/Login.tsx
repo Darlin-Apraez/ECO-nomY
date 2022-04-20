@@ -40,9 +40,8 @@ const Login = ({ navigation }: { navigation: any }) => {
     .then((userCredential) => {
     const user = userCredential.user;
     console.log(user.email);
-    
     if (user.emailVerified == false) {
-      alert("your account has not been verified, please check your email")
+      alert("Su cuenta no ha sido verificada, revise su correo electrónico")
       } else {
       navigation.navigate("DrawerApp") 
       }
@@ -53,7 +52,19 @@ const Login = ({ navigation }: { navigation: any }) => {
     .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    alert(errorMessage)
+    console.log(errorMessage);
+    if (errorMessage == "Firebase: Error (auth/invalid-email).") {
+      alert("Formato de correo inválido")
+      
+    }
+    if (errorMessage == "Firebase: Error (auth/user-not-found).") {
+      alert("Cuenta no registrada") 
+    }
+    if (errorMessage == "Firebase: Error (auth/wrong-password).") {
+      alert("Contraseña incorrecta")
+      
+    }
+      
     });
   }
 
@@ -62,14 +73,12 @@ const Login = ({ navigation }: { navigation: any }) => {
     const userId = auth.currentUser?.uid
     const db = getDatabase()
       set(ref(db, 'users/' + userId ), {
-      
+      //para juan cano , aqui debes agregar la llave publica y la llave secretagit
       email: textEmail,
       password : textPass,
-      ecopoint : 0,
       name : "",
       lastname :"",
-      ubication :"",
-      direction :"",
+      contributions : ""
       
     });
 
