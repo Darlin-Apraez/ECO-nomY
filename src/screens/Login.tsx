@@ -29,10 +29,11 @@ import { createAccount } from "../../controller";
 const sizeIcon = Platform.OS === "ios" ? 22 : 25;
 const sizeIconX = Platform.OS === "ios" ? 28 : 30;
 
-const Login = ({ navigation }: { navigation: any }) => {
+const Login = ({ navigation,route }: {  navigation: any; route: any }) => {
   const [textEmail, setTextEmail] = useState("");
   const [textPass, setTextPass] = useState("");
   const [check, setCheck] = useState(false);
+  const nickname = route.params?.user;
 
   //Create account
   async function create_account() {
@@ -88,8 +89,7 @@ const Login = ({ navigation }: { navigation: any }) => {
       //para juan cano , aqui debes agregar la llave publica y la llave secretagit
       email: textEmail,
       password : textPass,
-      name : "",
-      lastname :"",
+      nickname :nickname,
       contributions : ""
       
     });
