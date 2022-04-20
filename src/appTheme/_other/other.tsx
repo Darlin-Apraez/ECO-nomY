@@ -47,6 +47,7 @@ export const stylesO = StyleSheet.create({
 
   boxTitle_txt__top: {
     marginTop: RFValue(30),
+    height:RFValue(75),
   },
 
   boxCopy__top: {

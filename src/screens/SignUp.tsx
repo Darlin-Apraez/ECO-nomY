@@ -29,8 +29,10 @@ const sizeIconX = Platform.OS === "ios" ? 28 : 30;
 
 const SignUp = ({ navigation }: { navigation: any }) => {
   const [textEmail, setTextEmail] = useState("");
+  const [textUser, setTextUser] = useState("");
   const [textPass, setTextPass] = useState("");
   const [textConfirmPass, setTextConfirmPass] = useState("");
+  
   const [check, setCheck] = useState(false);
 
   async function SignUp() {
@@ -177,6 +179,66 @@ const SignUp = ({ navigation }: { navigation: any }) => {
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() => setTextEmail("")}
+                style={[stylesM.boxInput_icon, stylesL.JustifyAlign]}
+              >
+                <IconX name="x-circle" size={sizeIconX} color="#fff" />
+              </TouchableOpacity>
+            </View>
+
+
+            <View
+              style={[
+                stylesM.boxTitleInput,
+                stylesM.widthRectangle,
+                stylesO.boxTitleInput__top,
+              ]}
+            >
+              <View
+                style={[
+                  stylesM.boxTitleInput_titleInput,
+                  stylesO.boxTitleInput_titleInput__widthConfirm,
+                  stylesM.backgroundWhite,
+                  stylesL.JustifyAlign,
+                ]}
+              >
+                <Text
+                  style={[
+                    stylesM.boxTitleInput_titleInput_txt,
+                    stylesM.fontSizeTwelve,
+                    stylesM.textBold,
+                    stylesM.textColorDarkGreen,
+                  ]}
+                >
+                  Nombre de usuario
+                </Text>
+              </View>
+            </View>
+            <View
+              style={[
+                stylesM.boxInput,
+                stylesM.radiusFour,
+                stylesM.widthRectangle,
+                stylesO.boxInput__top,
+                stylesL.flexRow,
+              ]}
+            >
+              <View style={[stylesM.boxInput_txt]}>
+                <TextInput
+                  placeholder="Escriba su nombre de usuario."
+                  placeholderTextColor="#5AA85D"
+                  style={[
+                    stylesM.inputTxt,
+                    stylesM.textColorWhite,
+                    stylesM.fontSizeEighteen,
+                  ]}
+                  value={textUser}
+                  onChangeText={(value) => setTextUser(value)}
+                ></TextInput>
+              </View>
+
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => setTextUser("")}
                 style={[stylesM.boxInput_icon, stylesL.JustifyAlign]}
               >
                 <IconX name="x-circle" size={sizeIconX} color="#fff" />
