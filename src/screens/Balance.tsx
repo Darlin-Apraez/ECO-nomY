@@ -33,6 +33,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
   
 
   //firebase
+  const [publicKey,setPublicKey] = useState("");
   const [nickUser,setNickUser] = useState("");
   const userEmail = getAuth().currentUser?.email
   const idUser = getAuth().currentUser?.uid
@@ -40,8 +41,12 @@ const Balance = ({ navigation }: { navigation: any }) => {
   get(child(dbRef, `users/${idUser}`)).then((snapshot) => {
   if (snapshot.exists()) {
      const nickUser = snapshot.val().nickname;
+     const pubKey = snapshot.val().public_key;
+     setPublicKey(pubKey)
      setNickUser(nickUser)
       console.log(nickUser);
+      console.log(pubKey);
+      
  
     
   } else {
@@ -78,7 +83,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
   };
 
   // Concatenate pkey.
-  var str = "9zkw97JC6ENa4PuQJAJMjnj989R2XWbAxc9onLco3LZ3";
+  var str = publicKey;
   var strFirstThree = str.substring(0, 3);
   var strLastThree = str.substring(str.length - 3, str.length);
   var concatenado = `${strFirstThree}...${strLastThree}`;

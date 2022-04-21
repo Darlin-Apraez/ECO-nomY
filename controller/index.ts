@@ -10,7 +10,7 @@ global.fetch = fetchPolyfill
 
 //Create keypair
 async function createAccount() {
-    const response = await fetch('http://192.168.1.53:3000/keypair')
+    const response = await fetch('Aqui va tu direccion')
     const json = await response.json()
     return json
 }

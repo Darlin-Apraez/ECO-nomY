@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, Platform, Image } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 
 import {
   stylesB,
@@ -11,12 +11,50 @@ import {
 import Icon from "react-native-vector-icons/Entypo";
 import IconUser from "react-native-vector-icons/FontAwesome";
 import IconX from "react-native-vector-icons/Foundation";
+import { getAuth, signOut } from "firebase/auth";
+import { getDatabase, ref, child, get } from "firebase/database";
+
 
 const sizeIconMenu = Platform.OS === "ios" ? 30 : 35;
 const sizeIcon = Platform.OS === "ios" ? 30 : 35;
 const sizeIconX = Platform.OS === "ios" ? 28 : 30;
 
 function CustomDrawer({ navigation }: { navigation: any }) {
+  
+  //firebase
+  const auth = getAuth();
+  const [nickUser,setNickUser] = useState("");
+  const idUser = getAuth().currentUser?.uid
+  const dbRef = ref(getDatabase());
+  get(child(dbRef, `users/${idUser}`)).then((snapshot) => {
+  if (snapshot.exists()) {
+     const nickUser = snapshot.val().nickname;
+     setNickUser(nickUser)
+      console.log(nickUser);
+  } else {
+    console.log("No data available");
+  }
+  }).catch((error) => {
+  console.error(error);
+  });
+
+  async function SignOut() {
+    
+      await signOut(auth)
+      .then(()=>{
+        alert("Sesíon cerrada exitosamente")
+        navigation.navigate("Home");
+      })
+      .catch((error)=>{
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+
+      })
+      
+  
+    
+  }
   return (
     <View style={{ flex: 1 }}>
       <View style={{ top: 20 }}>
@@ -43,7 +81,7 @@ function CustomDrawer({ navigation }: { navigation: any }) {
                 stylesM.userMenuLeft_ecoLeft,
               ]}
             >
-              ECOfriend001.
+              {nickUser}
             </Text>
           </TouchableOpacity>
         </View>
@@ -117,6 +155,7 @@ function CustomDrawer({ navigation }: { navigation: any }) {
       <TouchableOpacity
         style={[stylesL.flexRow, stylesM.closeSesionMenu]}
         activeOpacity={0.5}
+        onPress={() => SignOut()}
       >
         <View style={[stylesM.closeSesionMenu_width, stylesL.JustifyAlign]}>
           <IconX name="x-circle" size={sizeIconX} color="#fff" />
