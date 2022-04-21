@@ -84,8 +84,7 @@ const Login = ({ navigation,route }: {  navigation: any; route: any }) => {
       contributions : ""
       
     });
-    
-    
+  
   }
 
   return (
