@@ -142,7 +142,7 @@ export default function App() {
           cardStyleInterpolator: CardStyleInterpolators.forFadeFromCenter,
         }}
       >
-        {/* <Stack.Screen
+        <Stack.Screen
           name="Splash"
           component={Splash}
           options={{ headerShown: false }}
@@ -206,7 +206,7 @@ export default function App() {
           name="Receive"
           component={Receive}
           options={{ headerShown: false }}
-        />*/}
+        />
         <Stack.Screen
           name="Send"
           component={Send}
