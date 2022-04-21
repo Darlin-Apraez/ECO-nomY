@@ -30,6 +30,7 @@ import CustomDrawer from "./src/components/CustomDrawer";
 import EcoAffilliateRedeem from "./src/screens/EcoAffilliateRedeem";
 import Notifications from "./src/screens/Notifications";
 import Receive from "./src/screens/Receive";
+import Send from "./src/screens/Send";
 
 import { initializeApp } from "firebase/app";
 
@@ -156,11 +157,6 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Balance"
-          component={Balance}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
           name="SignUp"
           component={SignUp}
           options={{ headerShown: false }}
@@ -173,6 +169,11 @@ export default function App() {
         <Stack.Screen
           name="NavigationMenu"
           component={NavigationMenu}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Balance"
+          component={Balance}
           options={{ headerShown: false }}
         />
         <Stack.Screen
@@ -203,6 +204,11 @@ export default function App() {
         <Stack.Screen
           name="Receive"
           component={Receive}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Send"
+          component={Send}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

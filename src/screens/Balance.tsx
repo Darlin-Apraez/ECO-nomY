@@ -308,7 +308,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
                 stylesL.flexRow,
                 stylesM.balanceButtons,
               ]}
-              // onPress={() => navigation.navigate("Balance")}
+              onPress={() => navigation.navigate("Send")}
             >
               <View style={[stylesM.balanceButtons_icon, stylesL.JustifyAlign]}>
                 <Image
