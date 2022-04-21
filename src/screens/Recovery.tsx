@@ -28,7 +28,8 @@ import {
   const sizeIconX = Platform.OS === "ios" ? 28 : 30;
   
   const Recovery = ({ navigation }: { navigation: any }) => {
-    const [textEmail, setTextEmail] = useState("");    
+    const [textEmail, setTextEmail] = useState("");
+    
   
     return (
       <LinearGradient
@@ -51,7 +52,7 @@ import {
             <TouchableOpacity
               activeOpacity={0.5}
               style={[stylesL.JustifyAlign, stylesM.goBack]}
-              onPress={() => navigation.navigate("Home")}
+              onPress={() => navigation.goBack()}
             >
               <Icon name="chevron-left" size={sizeIcon} color="#fff" />
             </TouchableOpacity>

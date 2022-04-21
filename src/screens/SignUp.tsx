@@ -93,7 +93,7 @@ const SignUp = ({ navigation }: { navigation: any }) => {
           <TouchableOpacity
             activeOpacity={0.5}
             style={[stylesL.JustifyAlign, stylesM.goBack]}
-            onPress={() => navigation.navigate("Home")}
+            onPress={() => navigation.goBack()}
           >
             <Icon name="chevron-left" size={sizeIcon} color="#fff" />
           </TouchableOpacity>
