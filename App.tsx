@@ -31,6 +31,7 @@ import EcoAffilliateRedeem from "./src/screens/EcoAffilliateRedeem";
 import Notifications from "./src/screens/Notifications";
 import Receive from "./src/screens/Receive";
 import Send from "./src/screens/Send";
+import QrReader from "./src/screens/QrReader";
 
 import { initializeApp } from "firebase/app";
 
@@ -141,7 +142,7 @@ export default function App() {
           cardStyleInterpolator: CardStyleInterpolators.forFadeFromCenter,
         }}
       >
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Splash"
           component={Splash}
           options={{ headerShown: false }}
@@ -160,7 +161,7 @@ export default function App() {
           name="SignUp"
           component={SignUp}
           options={{ headerShown: false }}
-        />
+        /> 
         <Stack.Screen
           name="DrawerApp"
           component={DrawerApp}
@@ -205,10 +206,15 @@ export default function App() {
           name="Receive"
           component={Receive}
           options={{ headerShown: false }}
-        />
+        />*/}
         <Stack.Screen
           name="Send"
           component={Send}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="QrReader"
+          component={QrReader}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
