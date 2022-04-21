@@ -42,7 +42,7 @@ const SignUp = ({ navigation }: { navigation: any }) => {
     if (textPass == textConfirmPass) {
       
       await createUserWithEmailAndPassword(auth, textEmail, textPass)
-      .then(navigation.navigate("Login"))
+      .then(navigation.navigate("Login",{user:textUser}))
       .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
