@@ -158,6 +158,19 @@ export const stylesM = StyleSheet.create({
     paddingVertical: RFValue(16),
   },
 
+  widthPercentageSeven:{
+    width: keyIos
+  },
+
+  widthPercentageTree:{ 
+    width: copyIos, 
+  },
+
+  widthPercentageFive:{
+    width: '50%'
+  },
+
+
   // =====================================================================
   // END UNITY VARIABLES.
   // =====================================================================
@@ -632,13 +645,22 @@ export const stylesM = StyleSheet.create({
     bottom: RFValue(12),
   },
 
-  botonGeneral_key:{
-    width: keyIos
+  botonGeneral_paddingLeft:{
+    paddingLeft:RFValue(12)
+  },
+  //End Receive
+
+  //Send
+  inputTxtPadding:{
+    paddingLeft:RFValue(13)
   },
 
-  botonGeneral_copy:{ 
-    width: copyIos, 
-    paddingLeft:RFValue(12)
+  boxEcoPoint_currency_imgSend:{
+    resizeMode:'contain',
+    width:43,
+    height:43,
+    marginRight:5
   }
-  //End Receive
+
+  //End Send
 });

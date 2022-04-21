@@ -135,7 +135,8 @@ const Receive = ({ navigation }: { navigation: any }) => {
             >
               <View
                 style={[
-                  stylesM.botonGeneral_key,
+                  stylesM.widthPercentageSeven,
+                  stylesM.botonGeneral_paddingLeft,
                   stylesL.alignItemsEnd,
                 ]}
               >
@@ -151,8 +152,8 @@ const Receive = ({ navigation }: { navigation: any }) => {
               </View>
               <View
                 style={[
-                  stylesM.widthRectangle,
-                  stylesM.botonGeneral_copy,
+                  stylesM.widthPercentageTree,
+                  stylesM.botonGeneral_paddingLeft
                 ]}
               >
                 <IconCopy name="copy-outline" size={sizeCopy} color="#fff" />
