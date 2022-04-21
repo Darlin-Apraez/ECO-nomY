@@ -87,6 +87,10 @@ export const stylesM = StyleSheet.create({
     fontSize: RFValue(53.5),
   },
 
+  fontSizeOneHundredTwenty: {
+    fontSize: RFValue(100),
+  },
+
   backgroundRed: {
     backgroundColor: "#764129",
   },
@@ -158,22 +162,80 @@ export const stylesM = StyleSheet.create({
     paddingVertical: RFValue(16),
   },
 
-  widthPercentageSeven:{
-    width: keyIos
+  widthPercentageSeven: {
+    width: keyIos,
   },
 
-  widthPercentageTree:{ 
-    width: copyIos, 
+  widthPercentageTree: {
+    width: copyIos,
   },
 
-  widthPercentageFive:{
-    width: '50%'
+  widthPercentageFive: {
+    width: "50%",
   },
-
 
   // =====================================================================
   // END UNITY VARIABLES.
   // =====================================================================
+
+  //Lottie
+  lottie: {
+    width: RFValue(41.7),
+    height: RFValue(41.7),
+  },
+
+  lottiexito: {
+    width: 60,
+    height: 60,
+  },
+
+  lottieqr: {
+    width: 380,
+    height: 380,
+  },
+
+  lottiesplash: {
+    width: RFValue(336),
+    height: RFValue(289),
+  },
+
+  lottiecopy: {
+    width: 53,
+    height: 53,
+  },
+
+  lottiecarga: {
+    width: 220,
+    height: 220,
+  },
+
+  lottiefallido: {
+    width: RFValue(213.8),
+    height: RFValue(213.8),
+  },
+
+  lottiesucces: {
+    width: RFValue(136.9),
+    height: RFValue(136.9),
+  },
+
+  lottiecondorchart: {
+    //backgroundColor: "red",
+    width: 50,
+    height: 50,
+    flex: 1,
+  },
+
+  lottiecerrars: {
+    width: RFValue(230),
+    height: RFValue(230),
+  },
+
+  lottieinternet: {
+    width: RFValue(334),
+    height: RFValue(334),
+  },
+  //Fin lottie
 
   //Splash
   logoeconomY: {
@@ -641,26 +703,41 @@ export const stylesM = StyleSheet.create({
     bottom: RFValue(71.5),
   },
 
-  boxBotonButtom_address:{
+  boxBotonButtom_address: {
     bottom: RFValue(12),
   },
 
-  botonGeneral_paddingLeft:{
-    paddingLeft:RFValue(12)
+  botonGeneral_paddingLeft: {
+    paddingLeft: RFValue(12),
   },
   //End Receive
 
   //Send
-  inputTxtPadding:{
-    paddingLeft:RFValue(13)
+  inputTxtPadding: {
+    paddingLeft: RFValue(13),
   },
 
-  boxEcoPoint_currency_imgSend:{
-    resizeMode:'contain',
-    width:43,
-    height:43,
-    marginRight:5
-  }
+  boxEcoPoint_currency_imgSend: {
+    resizeMode: "contain",
+    width: RFValue(36),
+    height: RFValue(36),
+    marginRight: RFValue(4),
+  },
 
+  boxWidth_txtAmount: {
+    height: "15%",
+  },
+
+  boxWidth_input: {
+    height: "60%",
+  },
+
+  boxWidth_ecoPoint: {
+    height: "25%",
+  },
+
+  boxInputAndress:{
+    marginTop: RFValue(32)
+  },
   //End Send
 });

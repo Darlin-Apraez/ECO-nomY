@@ -104,7 +104,7 @@ const Send = ({ navigation }: { navigation: any }) => {
                 stylesM.paddingHorizontalTwentySix,
               ]}
             >
-              <View style={[{ height: "15%" }, stylesL.JustifyAlign]}>
+              <View style={[stylesM.boxWidth_txtAmount, stylesL.JustifyAlign]}>
                 <Text
                   style={[stylesM.textColorWhite, stylesM.fontSizeEighteen]}
                 >
@@ -114,23 +114,21 @@ const Send = ({ navigation }: { navigation: any }) => {
 
               <View
                 style={[
-                  { height: "60%"},
+                  stylesM.boxWidth_input,
                   stylesL.JustifyAlign,
                 ]}
               >
                 <TextInput
                   keyboardType='numeric'
-                  style={[stylesM.textColorWhite, {fontSize:120}]}
+                  style={[stylesM.textColorWhite, stylesM.fontSizeOneHundredTwenty]}
                   placeholder='0'
                   placeholderTextColor="rgba(255, 255, 255, 0.62)"
-                >
-                 
-                </TextInput>
+                ></TextInput>
               </View>
 
               <View
                 style={[
-                  { height: "25%"},
+                  stylesM.boxWidth_ecoPoint,
                   stylesL.JustifyAlign,
                   stylesL.flexRow,
                 ]}
@@ -156,7 +154,7 @@ const Send = ({ navigation }: { navigation: any }) => {
             </View>
           </View>
 
-          <View style={[{ marginTop: 38 }]}>
+          <View style={[stylesM.boxInputAndress]}>
             <View
               style={[
                 stylesM.botonGeneral,
@@ -202,6 +200,7 @@ const Send = ({ navigation }: { navigation: any }) => {
                 <TouchableOpacity
                   activeOpacity={0.5}
                   style={[stylesM.widthPercentageFive, stylesL.JustifyAlign]}
+                  onPress={() => navigation.navigate("QrReader")}
                 >
                   <IconCopy
                     name="qr-code-outline"
