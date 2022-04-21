@@ -298,11 +298,13 @@ const Login = ({ navigation,route }: {  navigation: any; route: any }) => {
                 </View>
               </TouchableOpacity>
               <TouchableOpacity
+                activeOpacity={0.5}
                 style={[
                   stylesM.validation_forget,
                   stylesL.Justify,
                   stylesL.alignItemsEnd,
                 ]}
+                onPress={() => navigation.navigate("Recovery")}
               >
                 <Text
                   style={[stylesM.fontSizeFourteen, stylesM.textColorWhite]}

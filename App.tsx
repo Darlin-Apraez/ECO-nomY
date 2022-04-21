@@ -32,6 +32,7 @@ import Notifications from "./src/screens/Notifications";
 import Receive from "./src/screens/Receive";
 import Send from "./src/screens/Send";
 import QrReader from "./src/screens/QrReader";
+import Recovery from "./src/screens/Recovery";
 
 import { initializeApp } from "firebase/app";
 
@@ -162,6 +163,11 @@ export default function App() {
           component={SignUp}
           options={{ headerShown: false }}
         /> 
+        <Stack.Screen
+          name="Recovery"
+          component={Recovery}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="DrawerApp"
           component={DrawerApp}

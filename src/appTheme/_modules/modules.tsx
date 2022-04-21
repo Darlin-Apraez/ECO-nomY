@@ -35,6 +35,10 @@ export const stylesM = StyleSheet.create({
     color: "#ABCB59",
   },
 
+  textColorWhiteMedium:{
+    color: 'rgba(255, 255, 255, 0.75)'
+  },  
+
   textBold: {
     fontWeight: "bold",
   },
