@@ -120,14 +120,14 @@ export default function App() {
   const Stack = createStackNavigator();
   // Credential firebase
   const firebaseConfig = {
-    apiKey: "AIzaSyBOy0Kxcon-6Rm3lqD-uthNjP2VPxE6ha8",
-    authDomain: "economy-13078.firebaseapp.com",
-    databaseURL: "https://economy-13078-default-rtdb.firebaseio.com",
-    projectId: "economy-13078",
-    storageBucket: "economy-13078.appspot.com",
-    messagingSenderId: "774508910305",
-    appId: "1:774508910305:web:08a86780b91e28f24a89a0",
-    measurementId: "G-2905NCPSS8"
+    apiKey: "AIzaSyBrYB88VRssSoTA8u152jK_Echf9J52b1o",
+    authDomain: "economy-5016b.firebaseapp.com",
+    databaseURL: "https://economy-5016b-default-rtdb.firebaseio.com",
+    projectId: "economy-5016b",
+    storageBucket: "economy-5016b.appspot.com",
+    messagingSenderId: "537215273158",
+    appId: "1:537215273158:web:5a714339af2051deb4efc7",
+    measurementId: "G-L7GXNJ0P38"
   };
   
   // Initialize Firebase
