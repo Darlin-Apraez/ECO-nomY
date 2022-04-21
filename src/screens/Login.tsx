@@ -35,17 +35,6 @@ const Login = ({ navigation,route }: {  navigation: any; route: any }) => {
   const [check, setCheck] = useState(false);
   const nickname = route.params?.user;
 
-  //Create account
-  async function create_account() {
-    const acc = createAccount();
-    
-    acc.then((value) => {
-      setTimeout(() => {
-        console.log(value);
-      }, 2000);
-    })
-  }
-
   async function Login() {
 
     const auth = getAuth();
@@ -82,18 +71,20 @@ const Login = ({ navigation,route }: {  navigation: any; route: any }) => {
   }
 
   async function dataBase() {
+    const acc = await createAccount()
     const auth = getAuth()
     const userId = auth.currentUser?.uid
     const db = getDatabase()
       set(ref(db, 'users/' + userId ), {
-      //para juan cano , aqui debes agregar la llave publica y la llave secretagit
+      public_key: acc.public_key,
+      secret_key: acc.secret_key,
       email: textEmail,
       password : textPass,
       nickname :nickname,
       contributions : ""
       
     });
-
+    
     
   }
 
