@@ -22,10 +22,16 @@ function createConnection(cluster:string) {
 
 //Create keypair
 async function createAccount() {
-    const response = await fetch('Aqui va tu direccion')
+    const response = await fetch('http://wwww/keypair')
     const json = await response.json()
     return json
 }
+
+async function sendSPL(secretKey: string, toPublicKey: string, amount: number, mint: string){
+    const response = await fetch(`http://wwww/send_transaction_spl/${secretKey}/${toPublicKey}/${amount}/${mint}`)
+    const text = await response.text()
+    return text
+  }
 
 //buscar cuentas asociadas a tokens
 async function findAssociatedTokenAddress(
