@@ -15,16 +15,17 @@ import {
   ToastAndroid,
   Alert,
   ScrollView,
-  Image,
+  Image
 } from "react-native";
 import BarStatus from "../components/BarStatus";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import IconUser from "react-native-vector-icons/FontAwesome";
 import IconCopy from "react-native-vector-icons/Ionicons";
 import IconButtons from "react-native-vector-icons/Feather";
 import { getAuth } from "firebase/auth";
 import { getDatabase, ref, child, get } from "firebase/database";
+import { getToken } from "../../controller";
 
 const sizeIcon = Platform.OS === "ios" ? 22 : 25;
 const sizeIconButtons = Platform.OS === "ios" ? 22 : 35;
@@ -44,16 +45,26 @@ const Balance = ({ navigation }: { navigation: any }) => {
      const pubKey = snapshot.val().public_key;
      setPublicKey(pubKey)
      setNickUser(nickUser)
-      console.log(nickUser);
-      console.log(pubKey);
-      
- 
-    
+
   } else {
     console.log("No data available");
   }
   }).catch((error) => {
   console.error(error);
+  });
+
+  //Funcion de obtener balance splToken
+  const [tokenBalance, setTokenBalance] = useState(0);
+
+  async function obtenerTokenB(publicKey: string, mint: string) {
+    const bala = getToken(publicKey, mint).then((value) => {
+      setTokenBalance(value);
+    });
+  }
+
+  useEffect(() => {
+    //obtener balance del token
+    obtenerTokenB(publicKey, "ECQkERLRgPGW34P5jjLvEGy449qGjq75BinqynBNyCqp");
   });
 
   //copy icons
@@ -202,7 +213,7 @@ const Balance = ({ navigation }: { navigation: any }) => {
                   <Text
                     style={[stylesM.textColorWhite, stylesM.fontSizeSixtyFour]}
                   >
-                    100
+                    {tokenBalance}
                   </Text>
                 </View>
                 <View style={[stylesM.boxEcoPoint_currency, stylesL.Justify]}>
