@@ -29,6 +29,9 @@ import {
   import IconCopy from "react-native-vector-icons/Ionicons";
   import IconPaste from "react-native-vector-icons/FontAwesome5";
 import { onChange } from "react-native-reanimated";
+import { sendSPL } from "../../controller";
+import { getAuth } from "firebase/auth";
+import { getDatabase, ref, child, get } from "firebase/database";
   
   const sizeIcon = Platform.OS === "ios" ? 30 : 35;
   const sizeCopy = Platform.OS === "ios" ? 19 : 22;
@@ -38,7 +41,8 @@ const Send = ({ navigation }: { navigation: any }) => {
   const [bloqueoText , setBloqueoText] = useState (true)
   const [copiedText, setCopiedText] = useState("");
   const [toPublic, setToPublic] = useState("");
-  const [ammount, setAmmount] = useState("");
+  const [amount, setAmount] = useState("");
+  const [secretKey, setSecretkey] = useState("");
 
   const fetchCopiedText = async () => {
     const text = await Clipboard.getString();
@@ -47,7 +51,30 @@ const Send = ({ navigation }: { navigation: any }) => {
     setBloqueoText(false)
   };
 
+  const userEmail = getAuth().currentUser?.email
+  const idUser = getAuth().currentUser?.uid
+  const dbRef = ref(getDatabase());
+  get(child(dbRef, `users/${idUser}`)).then((snapshot) => {
+    if (snapshot.exists()) {
+       const key = snapshot.val().secret_key;
+       setSecretkey(key)
+    } else {
+      console.log("No data available");
+    }
+    }).catch((error) => {
+    console.error(error);
+    });
 
+async function sendEcopoint() {
+  
+  const transaccion = await sendSPL(
+    secretKey, 
+    toPublic, 
+    Number(amount), 
+    'ECQkERLRgPGW34P5jjLvEGy449qGjq75BinqynBNyCqp'
+  );
+
+}
 
   
   return (
@@ -121,6 +148,7 @@ const Send = ({ navigation }: { navigation: any }) => {
                 <TextInput
                   keyboardType='numeric'
                   style={[stylesM.textColorWhite, stylesM.fontSizeOneHundredTwenty]}
+                  onChangeText={(val) => setAmount(val)}
                   placeholder='0'
                   placeholderTextColor="rgba(255, 255, 255, 0.62)"
                 ></TextInput>

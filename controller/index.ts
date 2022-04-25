@@ -65,5 +65,6 @@ async function getToken(publicKey: string, splToken: string){
 
 export {
     createAccount,
-    getToken
+    getToken,
+    sendSPL
 }
