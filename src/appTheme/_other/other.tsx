@@ -112,4 +112,8 @@ export const stylesO = StyleSheet.create({
     shadowOpacity: 0,
     shadowRadius: 0,
   },
+
+  boxBottomQr_txt__width:{
+    width:RFValue(120)
+  }
 });
