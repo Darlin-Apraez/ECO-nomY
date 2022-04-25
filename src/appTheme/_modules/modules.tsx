@@ -11,6 +11,9 @@ const fontSizeTwelveIos = Platform.OS === "ios" ? 8.5 : 10;
 const copyIos = Platform.OS === "ios" ? '23%' : '30%';
 const keyIos = Platform.OS === "ios" ? '77%' : '70%';
 
+const windowWidth = Dimensions.get("screen").width;
+const windowHeight = Dimensions.get("screen").height;
+
 export const stylesM = StyleSheet.create({
   // =====================================================================
   // UNITY VARIABLES
@@ -35,9 +38,9 @@ export const stylesM = StyleSheet.create({
     color: "#ABCB59",
   },
 
-  textColorWhiteMedium:{
-    color: 'rgba(255, 255, 255, 0.75)'
-  },  
+  textColorWhiteMedium: {
+    color: "rgba(255, 255, 255, 0.75)",
+  },
 
   textBold: {
     fontWeight: "bold",
@@ -113,6 +116,10 @@ export const stylesM = StyleSheet.create({
 
   backgroundGhostWhite: {
     backgroundColor: "#E5E6F2",
+  },
+
+  backgroundBlackMedium: {
+    backgroundColor: "rgba(29, 29, 27, 0.45)",
   },
 
   widthRectangle: {
@@ -740,8 +747,41 @@ export const stylesM = StyleSheet.create({
     height: "25%",
   },
 
-  boxInputAndress:{
-    marginTop: RFValue(32)
+  boxInputAndress: {
+    marginTop: RFValue(32),
   },
   //End Send
+
+  //QrReader
+  box_titleQr: {
+    padding: RFValue(20),
+    top: RFValue(-40),
+  },
+
+  boxScanQr: {
+    width: windowWidth * 0.8,
+    height: windowHeight * 0.4,
+    borderWidth: 5,
+    borderColor: "rgba(255, 255, 255, 0.45)",
+  },
+
+  textKey: {
+    paddingHorizontal: RFValue(12),
+    top: RFValue(-50),
+  },
+
+  boxBottomQr:{
+    padding:RFValue(12)
+  },
+
+  boxBottomQr_txt: {
+    height: RFValue(42),
+    elevation: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+  },
+
+  //End QrReader
 });

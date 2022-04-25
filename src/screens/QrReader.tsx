@@ -16,6 +16,7 @@ import {
   Dimensions,
   Modal,
   Button,
+  SafeAreaView
 } from "react-native";
 import { Camera } from "expo-camera";
 import { BarCodeScanner } from "expo-barcode-scanner";
@@ -23,9 +24,15 @@ import { RFValue } from "react-native-responsive-fontsize";
 import * as Animatable from "react-native-animatable";
 import { Lotierror, Lotieqr } from "../components/Lottie";
 import LottieView from "lottie-react-native";
+import Icon from "react-native-vector-icons/Entypo";
+import BarStatus from "../components/BarStatus";
+import { LinearGradient } from "expo-linear-gradient";
 
 const windowWidth = Dimensions.get("screen").width;
 const windowHeight = Dimensions.get("screen").height;
+
+
+const sizeIcon = Platform.OS === "ios" ? 30 : 35;
 
 const QrReader = ({ navigation }: { navigation: any }) => {
   // +++++++++++++++++++++++++++++++++++++++++Qr para iOS+++++++++++++++++++++++++++++++++++++++++
@@ -174,20 +181,20 @@ const QrReader = ({ navigation }: { navigation: any }) => {
         <Animatable.View animation={"fadeInDownBig"} duration={600}>
           <View>
             <View style={styles.ventanaqra}>
-              <View style={styles.contenedortextfulla}>
-                <Text style={styles.texticonfulla}>Permiso Denegado</Text>
+              <View style={[stylesL.JustifyAlign]}>
+                <Text style={[stylesM.fontSizeTwentyEight, stylesM.textColorWhite, stylesM.textBold]}>Permiso Denegado</Text>
               </View>
               {/* Lottie */}
               <View>
                 <LottieView
-                  style={styles.lottieqr}
+                  style={stylesM.lottieqr}
                   source={require("../../assets/lottie/error.json")}
                   speed={2}
                   autoPlay
                 />
               </View>
               <View>
-                <Text style={styles.notificacionfulla}>
+                <Text style={[stylesM.textKey, stylesM.textColorWhite, stylesL.textAlignCenter, stylesM.fontSizeEighteen]}>
                   Revisa los permisos de la cámara ingresando en configuración,
                   privacidad y cámara.
                 </Text>
@@ -222,8 +229,8 @@ const QrReader = ({ navigation }: { navigation: any }) => {
 
     //boton volver
     function regresar() {
-      setScanned(false);
       navigation.navigate("Send");
+      setScanned(false);  
     }
 
     useEffect(() => {
@@ -240,99 +247,176 @@ const QrReader = ({ navigation }: { navigation: any }) => {
         </View>
       );
     }
+
     if (hasPermission === false) {
       return (
-        <View style={styles.cajaqra}>
-          <Animatable.View animation={"fadeInDownBig"} duration={600}>
-            <View>
-              <View style={styles.ventanaqra}>
-                <View style={styles.contenedortextfulla}>
-                  <Text style={styles.texticonfulla}>Permiso Denegado</Text>
+        <LinearGradient
+          colors={["#38AA35", "#1F5326"]}
+          style={stylesB.linear}
+          start={{ x: 0, y: 1.6 }}
+          end={{ x: 0, y: 0 }}
+        >
+          <SafeAreaView style={stylesB.body}>
+            <BarStatus />
+            <View style={[stylesB.completo, stylesL.Justify]}>
+              <Animatable.View animation={"fadeInDownBig"} duration={1500} style={[stylesL.JustifyAlign]}>
+                <View style={[stylesL.JustifyAlign]}>
+                  <Text
+                    style={[
+                      stylesM.fontSizeTwentyEight,
+                      stylesM.textColorWhite,
+                      stylesM.textBold,
+                    ]}
+                  >
+                    Permiso Denegado
+                  </Text>
                 </View>
-                {/* Lottie */}
+
                 <View>
                   <LottieView
-                    style={styles.lottieqr}
+                    style={stylesM.lottieqr}
                     source={require("../../assets/lottie/error.json")}
                     speed={2}
                     autoPlay
                   />
                 </View>
-                <View>
-                  <Text style={styles.notificacionfulla}>
-                    El permiso de la cámara ha sido denegado
-                  </Text>
-                </View>
-                <View style={styles.cajav}>
+
+                <Text
+                  style={[
+                    stylesM.textKey,
+                    stylesM.textColorWhite,
+                    stylesL.textAlignCenter,
+                    stylesM.fontSizeEighteen,
+                  ]}
+                >
+                  {`El permiso de la cámara ha sido denegado \n revisa los ajustes.`}
+                </Text>
+
+                <View style={stylesL.AlignItems}>
                   <TouchableOpacity
-                    style={styles.btnv}
+                    style={[
+                      stylesM.boxBottomQr_txt,
+                      stylesO.boxBottomQr_txt__width,
+                      stylesM.backgroundYellowGreen,
+                      stylesM.radiusTwenty,
+                      stylesL.JustifyAlign,
+                    ]}
                     activeOpacity={0.5}
                     onPress={() => regresar()}
                   >
-                    <Text style={[styles.txtv, stylesM.textColorDarkGreen]}>VOLVER</Text>
+                    <Text style={[stylesM.textBold, stylesM.fontSizeFourteen, stylesM.textColorDarkGreen]}>VOLVER</Text>
                   </TouchableOpacity>
                 </View>
-              </View>
+              </Animatable.View>
             </View>
-          </Animatable.View>
-        </View>
+          </SafeAreaView>
+        </LinearGradient>
       );
     }
     if (scanned == true) {
       return (
-        <View style={styles.cajaqra}>
-          <Animatable.View animation={"fadeInDownBig"} duration={600}>
-            <View>
-              <View style={styles.ventanaqra}>
-                <View style={styles.contenedortextfulla}>
-                  <Text style={styles.texticonfulla}>QR Scaneado</Text>
+        <LinearGradient
+          colors={["#38AA35", "#1F5326"]}
+          style={stylesB.linear}
+          start={{ x: 0, y: 1.6 }}
+          end={{ x: 0, y: 0 }}
+        >
+          <SafeAreaView style={stylesB.body}>
+            <BarStatus />
+            <View style={[stylesB.completo, stylesL.Justify]}>
+              <Animatable.View animation={"fadeInDownBig"} duration={1500} style={[stylesL.JustifyAlign]}>
+                <View style={[stylesL.JustifyAlign]}>
+                  <Text
+                    style={[
+                      stylesM.fontSizeTwentyEight,
+                      stylesM.textColorWhite,
+                      stylesM.textBold,
+                    ]}
+                  >
+                    QR Scaneado
+                  </Text>
                 </View>
-                {/* Lottie */}
+
                 <View>
                   <LottieView
-                    style={styles.lottieqr}
+                    style={stylesM.lottieqr}
                     source={require("../../assets/lottie/qrscan2.json")}
                     speed={1}
                     autoPlay
                   />
                 </View>
 
-                <View>
-                  <Text style={styles.notificacionfulla}>
-                    Llave pública copiada en el portapapeles:
-                  </Text>
-                </View>
-                {/* Texto copiado */}
-                <Text style={styles.copiadotxta}>{text}</Text>
-                {/* Botones modal */}
-                <View style={styles.dcVCa}>
-                  <View style={styles.dcVa}>
+                <Text
+                  style={[
+                    stylesM.textKey,
+                    stylesM.textColorWhite,
+                    stylesL.textAlignCenter,
+                    stylesM.fontSizeEighteen,
+                  ]}
+                >
+                  Llave pública copiada en el portapapeles.
+                </Text>
+
+                <View style={[stylesL.flexRow, stylesM.widthRectangle]}>
+                  <View
+                    style={[stylesM.boxBottomQr,stylesM.widthPercentageFive]}
+                  >
                     <TouchableOpacity
-                      style={[styles.btnVCa, { zIndex: 999 }]}
-                      activeOpacity={0.5}
+                      style={[
+                        stylesM.boxBottomQr_txt,
+                        stylesM.backgroundYellowGreen,
+                        stylesM.radiusTwenty,
+                        stylesL.JustifyAlign,
+                      ]}
+                      activeOpacity={0.8}
                       onPress={() => [setScanned(false), setaprobado(false)]}
                     >
-                      <Text style={styles.textbtnVCa}>REESCANEAR</Text>
+                      <Text
+                        style={[styles.textbtnVCa, stylesM.textColorDarkGreen]}
+                      >
+                        REESCANEAR
+                      </Text>
                     </TouchableOpacity>
                   </View>
-                  <View style={styles.dcCa}>
+
+
+                  <View
+                    style={[stylesM.boxBottomQr,stylesM.widthPercentageFive]}
+                  >
                     <TouchableOpacity
-                      style={styles.btnVCa}
-                      activeOpacity={0.5}
-                      onPress={() => regresar()}
+                      style={[
+                        stylesM.boxBottomQr_txt,
+                        stylesM.backgroundYellowGreen,
+                        stylesM.radiusTwenty,
+                        stylesL.JustifyAlign,
+                      ]}
+                    activeOpacity={0.8}
+                    onPress={() => regresar()}
                     >
-                      <Text style={styles.textbtnVCa}>CONFIRMAR</Text>
+                      <Text
+                        style={[styles.textbtnVCa, stylesM.textColorDarkGreen]}
+                      >
+                        CONFIRMAR
+                      </Text>
                     </TouchableOpacity>
                   </View>
                 </View>
-              </View>
+              </Animatable.View>
             </View>
-          </Animatable.View>
-        </View>
+          </SafeAreaView>
+        </LinearGradient>
       );
     }
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={stylesB.body}>
+        <BarStatus />
+        <TouchableOpacity
+          activeOpacity={0.5}
+          style={[stylesL.JustifyAlign, stylesM.goBack, stylesO.goBack__top]}
+          onPress={() => navigation.goBack()}
+        >
+          <Icon name="chevron-left" size={sizeIcon} color="#fff" />
+        </TouchableOpacity>
         <Camera
           onBarCodeScanned={(...args) => {
             const data = args[0].data;
@@ -344,28 +428,19 @@ const QrReader = ({ navigation }: { navigation: any }) => {
           barCodeScannerSettings={{
             barCodeTypes: ["qr"],
           }}
-          style={[styles.colorqra, { flex: 1 }]}
+          style={[stylesB.completo, stylesL.Justify]}
         >
-          <View style={styles.tituloqra}>
-            <Text style={styles.textqra}>ESCANEAR CÓDIGO QR</Text>
+          <View style={[stylesM.box_titleQr, stylesL.AlignItems, stylesM.radiusSixteen, stylesM.backgroundBlackMedium]}>
+            <Text style={stylesM.textColorWhite}>ESCANEAR CÓDIGO QR</Text>
           </View>
           <Animatable.View
-            style={styles.barcodeboxa}
+            style={[stylesM.boxScanQr, stylesM.radiusSixteen]}
             animation="pulse"
             duration={2000}
             iterationCount={"infinite"}
           ></Animatable.View>
-          <View style={styles.cajavolvera}>
-            <TouchableOpacity
-              style={[styles.btnvolvera, stylesM.backgroundYellowGreen]}
-              activeOpacity={0.8}
-              onPress={() => regresar()}
-            >
-              <Text style={[styles.txtvolvera, stylesM.textColorDarkGreen, stylesM.textBold]}>VOLVER</Text>
-            </TouchableOpacity>
-          </View>
         </Camera>
-      </View>
+      </SafeAreaView>
     );
   }
 
@@ -519,26 +594,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  contenedortextfulla: {
-    justifyContent: "center",
-    top: RFValue(0),
-  },
-  texticonfulla: {
-    color: "white",
-    fontSize: RFValue(25),
-    fontWeight: "bold",
-  },
-  lottieqr: {
-    height: 380,
-    width: 380,
-  },
-  notificacionfulla: {
-    color: "white",
-    fontSize: RFValue(16),
-    paddingHorizontal: RFValue(12),
-    textAlign: "center",
-    top: RFValue(-50),
-  },
+
   copiadotxta: {
     color: "#b9b8b8",
     fontSize: RFValue(16),
@@ -547,9 +603,6 @@ const styles = StyleSheet.create({
     top: RFValue(-40),
   },
   dcVCa: {
-    borderRadius: 10,
-    bottom: RFValue(0),
-    flexDirection: "row",
     padding: RFValue(15),
   },
   dcVa: {
@@ -558,20 +611,7 @@ const styles = StyleSheet.create({
   dcCa: {
     width: RFValue(143),
   },
-  btnVCa: {
-    alignItems: "center",
-    backgroundColor: "white",
-    borderRadius: 20,
-    elevation: 10,
-    marginRight: RFValue(15),
-    marginLeft: RFValue(15),
-    paddingTop: RFValue(12),
-    paddingBottom: RFValue(12),
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-  },
+
   textbtnVCa: {
     color: "#5b298a",
     fontWeight: "bold",
@@ -580,31 +620,7 @@ const styles = StyleSheet.create({
   },
 
   //camara
-  colorqra: {
-    alignItems: "center",
-    justifyContent: "center",
-    paddingLeft: "5%",
-    paddingRight: "4%",
-  },
-  tituloqra: {
-    alignItems: "center",
-    borderRadius: 15,
-    backgroundColor: "rgba(29, 29, 27, 0.45)",
-    padding: RFValue(20),
-    top: RFValue(-40),
-  },
-  textqra: {
-    color: "white",
-  },
-  barcodeboxa: {
-    alignItems: "center",
-    justifyContent: "center",
-    height: windowHeight * 0.4,
-    width: windowWidth * 0.8,
-    borderRadius: 15,
-    borderWidth: 5,
-    borderColor: "rgba(255, 255, 255, 0.45)",
-  },
+  
   cajavolvera: {
     alignItems: "center",
     bottom: RFValue(-40),
