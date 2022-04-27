@@ -88,6 +88,7 @@ function CustomDrawer({ navigation }: { navigation: any }) {
         <TouchableOpacity
           style={[stylesM.userMenuLeft_pencil, stylesL.JustifyAlign]}
           activeOpacity={0.5}
+          onPress={() => navigation.navigate("EditProfile")}
         >
           <Image
             source={require("./../../assets/img/pencil.png")}

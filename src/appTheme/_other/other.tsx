@@ -115,5 +115,13 @@ export const stylesO = StyleSheet.create({
 
   boxBottomQr_txt__width:{
     width:RFValue(120)
+  },
+
+  boxHistory_txt__width:{
+    width:"88%"
+  },
+
+  boxSubTitlePrincipal__top:{
+    marginTop:RFValue(17)
   }
 });
