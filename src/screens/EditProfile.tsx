@@ -13,18 +13,36 @@ import {
     Image,
     TouchableOpacity,
     Platform,
+    TextInput
 } from "react-native";
 import BarStatus from "../components/BarStatus";
-import React from "react";
+import React, {useState} from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Icon from "react-native-vector-icons/Entypo";
 import IconUser from "react-native-vector-icons/FontAwesome";
 import IconDown from "react-native-vector-icons/SimpleLineIcons";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+
 
 const sizeIcon = Platform.OS === "ios" ? 30 : 35;
 const sizeIconUser = Platform.OS === "ios" ? 22 : 25;
   
   const EditProfile = ({ navigation }: { navigation: any }) => {
+    
+
+    //active textinput style
+    const [stateUser,setStateUser]= useState({isFocused: false})
+    const handleFocusUser = () => setStateUser({isFocused: true})
+    const handleBlurUser = () => setStateUser({isFocused: false})
+
+    const [stateEmail,setStateEmail]= useState({isFocused: false})
+    const handleFocusEmail = () => setStateEmail({isFocused: true})
+    const handleBlurEmail = () => setStateEmail({isFocused: false})
+
+    const [statePass,setStatePass]= useState({isFocused: false})
+    const handleFocusPass = () => setStatePass({isFocused: true})
+    const handleBlurPass = () => setStatePass({isFocused: false})
+    
     return (
       <LinearGradient
         colors={["#38AA35", "#1F5326"]}
@@ -34,7 +52,15 @@ const sizeIconUser = Platform.OS === "ios" ? 22 : 25;
       >
         <SafeAreaView style={stylesB.body}>
           <BarStatus />
-          <View style={stylesB.completo}>
+          <KeyboardAwareScrollView
+            resetScrollToCoords={{ x: 0, y: 0 }}
+            contentContainerStyle={[
+              stylesB.completo,
+              stylesO.completo__flexGrow,
+            ]}
+            scrollEnabled
+            enableOnAndroid={true}
+          >
             <TouchableOpacity
               activeOpacity={0.5}
               style={[
@@ -58,7 +84,12 @@ const sizeIconUser = Platform.OS === "ios" ? 22 : 25;
               </Text>
             </View>
 
-            <View style={[stylesM.boxSubTitlePrincipal, stylesO.boxSubTitlePrincipal__top]}>
+            <View
+              style={[
+                stylesM.boxSubTitlePrincipal,
+                stylesO.boxSubTitlePrincipal__top,
+              ]}
+            >
               <Image
                 style={[stylesM.boxSubTitlePrincipal_img]}
                 source={require("./../../assets/img/economY.png")}
@@ -108,15 +139,24 @@ const sizeIconUser = Platform.OS === "ios" ? 22 : 25;
                     </View>
 
                     <View style={[stylesM.boxHistory_txt, stylesL.Justify]}>
-                      <Text
+                      <TextInput
                         style={[
                           stylesM.textColorWhite,
                           stylesM.fontSizeEighteen,
                           stylesM.textMedium,
+                          {
+                            borderBottomColor: stateUser.isFocused
+                              ? "white"
+                              : "#1F5326",
+                            borderBottomWidth: 1,
+                            padding: 0,
+                          },
                         ]}
+                        onFocus={handleFocusUser}
+                        onBlur={handleBlurUser}
                       >
                         Eco Friend 001
-                      </Text>
+                      </TextInput>
                     </View>
 
                     <TouchableOpacity
@@ -148,15 +188,24 @@ const sizeIconUser = Platform.OS === "ios" ? 22 : 25;
                         stylesM.inputTxtPadding,
                       ]}
                     >
-                      <Text
+                      <TextInput
                         style={[
                           stylesM.textColorWhite,
                           stylesM.fontSizeEighteen,
                           stylesM.textMedium,
+                          {
+                            borderBottomColor: stateEmail.isFocused
+                              ? "white"
+                              : "#1F5326",
+                            borderBottomWidth: 1,
+                            padding: 0,
+                          },
                         ]}
+                        onFocus={handleFocusEmail}
+                        onBlur={handleBlurEmail}
                       >
                         ecofriend001@gmail.com
-                      </Text>
+                      </TextInput>
                     </View>
 
                     <TouchableOpacity
@@ -186,18 +235,45 @@ const sizeIconUser = Platform.OS === "ios" ? 22 : 25;
                         stylesO.boxHistory_txt__width,
                         stylesL.Justify,
                         stylesM.inputTxtPadding,
+                        stylesL.flexColumn
                       ]}
-                    >
+                    > 
                       <Text
                         style={[
                           stylesM.textColorWhite,
                           stylesM.fontSizeEighteen,
                           stylesM.textMedium,
+                          {
+                            fontSize: statePass.isFocused
+                              ? 15
+                              : 18,
+                          }
                         ]}
                       >
                         Cambiar contraseña
                       </Text>
-                      <Text style={[stylesM.textColorWhite]}>********</Text>
+                      <TextInput
+                        style={[
+                          stylesM.textColorWhite,
+                          stylesM.fontSizeEighteen,
+                          stylesM.textMedium,
+                          {
+                            fontSize: statePass.isFocused
+                              ? 25
+                              : 17,
+                            borderBottomColor: statePass.isFocused
+                              ? "white"
+                              : "transparent",
+
+                            borderBottomWidth: 1,
+                            padding: 0,
+                          },
+                        ]}
+                        onFocus={handleFocusPass}
+                        onBlur={handleBlurPass}
+                      >
+                        ********
+                      </TextInput>
                     </View>
 
                     <TouchableOpacity
@@ -280,7 +356,7 @@ const sizeIconUser = Platform.OS === "ios" ? 22 : 25;
                 </Text>
               </TouchableOpacity>
             </View>
-          </View>
+          </KeyboardAwareScrollView>
         </SafeAreaView>
       </LinearGradient>
     );
