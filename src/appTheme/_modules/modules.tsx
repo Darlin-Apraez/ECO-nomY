@@ -489,8 +489,8 @@ export const stylesM = StyleSheet.create({
   },
 
   userMenuLeft_pencil_image: {
-    height: RFValue(45.9),
-    width: RFValue(45.9),
+    height: RFValue(43),
+    width: RFValue(43),
     top: RFValue(2.6),
     resizeMode: "contain",
   },
@@ -784,4 +784,13 @@ export const stylesM = StyleSheet.create({
   },
 
   //End QrReader
+
+  //EditProfile
+  boxSubTitlePrincipal_img:{
+    width: 143,
+    height: 143,
+    resizeMode: "contain"
+  }
+
+  //End EditProfile
 });

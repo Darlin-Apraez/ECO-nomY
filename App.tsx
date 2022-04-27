@@ -33,6 +33,8 @@ import Receive from "./src/screens/Receive";
 import Send from "./src/screens/Send";
 import QrReader from "./src/screens/QrReader";
 import Recovery from "./src/screens/Recovery";
+import EditProfile from "./src/screens/EditProfile";
+
 
 import { initializeApp } from "firebase/app";
 
@@ -162,7 +164,7 @@ export default function App() {
           name="SignUp"
           component={SignUp}
           options={{ headerShown: false }}
-        /> 
+        />
         <Stack.Screen
           name="Recovery"
           component={Recovery}
@@ -221,6 +223,11 @@ export default function App() {
         <Stack.Screen
           name="QrReader"
           component={QrReader}
+          options={{ headerShown: false }}
+        /> 
+        <Stack.Screen
+          name="EditProfile"
+          component={EditProfile}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
